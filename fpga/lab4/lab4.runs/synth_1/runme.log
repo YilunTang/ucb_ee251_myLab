@@ -1,0 +1,342 @@
+
+*** Running vivado
+    with args -log debouncer_fpga_test.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source debouncer_fpga_test.tcl
+
+
+****** Vivado v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source debouncer_fpga_test.tcl -notrace
+Command: synth_design -top debouncer_fpga_test -part xc7z020clg400-3
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 6141 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1359.680 ; gain = 81.938 ; free physical = 2652 ; free virtual = 11508
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'debouncer_fpga_test' [/home/cc/eecs151/fa18/class/eecs151-abp/Desktop/ee251_labs/fpga_labs_fa18/lab4/lab4.srcs/sources_1/new/debouncer_fpga_test.v:3]
+	Parameter B_SAMPLE_COUNT_MAX bound to: 95000 - type: integer 
+	Parameter B_PULSE_COUNT_MAX bound to: 150 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'button_parser' [/home/cc/eecs151/fa18/class/eecs151-abp/Desktop/ee251_labs/fpga_labs_fa18/lab4/lab4.srcs/sources_1/new/button_parser.v:4]
+	Parameter width bound to: 4 - type: integer 
+	Parameter sample_count_max bound to: 95000 - type: integer 
+	Parameter pulse_count_max bound to: 150 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'synchronizer' [/home/cc/eecs151/fa18/class/eecs151-abp/Desktop/ee251_labs/fpga_labs_fa18/lab4/lab4.srcs/sources_1/new/synchronizer.v:1]
+	Parameter width bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'synchronizer' (1#1) [/home/cc/eecs151/fa18/class/eecs151-abp/Desktop/ee251_labs/fpga_labs_fa18/lab4/lab4.srcs/sources_1/new/synchronizer.v:1]
+INFO: [Synth 8-638] synthesizing module 'debouncer' [/home/cc/eecs151/fa18/class/eecs151-abp/Desktop/ee251_labs/fpga_labs_fa18/lab4/lab4.srcs/sources_1/new/debouncer.v:47]
+	Parameter width bound to: 4 - type: integer 
+	Parameter sample_count_max bound to: 95000 - type: integer 
+	Parameter pulse_count_max bound to: 150 - type: integer 
+	Parameter wrapping_counter_width bound to: 17 - type: integer 
+	Parameter saturating_counter_width bound to: 8 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'pulse_generator' [/home/cc/eecs151/fa18/class/eecs151-abp/Desktop/ee251_labs/fpga_labs_fa18/lab4/lab4.srcs/sources_1/new/debouncer.v:4]
+	Parameter sample_count_max bound to: 95000 - type: integer 
+	Parameter wrapping_counter_width bound to: 17 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'pulse_generator' (2#1) [/home/cc/eecs151/fa18/class/eecs151-abp/Desktop/ee251_labs/fpga_labs_fa18/lab4/lab4.srcs/sources_1/new/debouncer.v:4]
+INFO: [Synth 8-256] done synthesizing module 'debouncer' (3#1) [/home/cc/eecs151/fa18/class/eecs151-abp/Desktop/ee251_labs/fpga_labs_fa18/lab4/lab4.srcs/sources_1/new/debouncer.v:47]
+INFO: [Synth 8-638] synthesizing module 'edge_detector' [/home/cc/eecs151/fa18/class/eecs151-abp/Desktop/ee251_labs/fpga_labs_fa18/lab4/lab4.srcs/sources_1/new/edge_detector.v:1]
+	Parameter width bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'edge_detector' (4#1) [/home/cc/eecs151/fa18/class/eecs151-abp/Desktop/ee251_labs/fpga_labs_fa18/lab4/lab4.srcs/sources_1/new/edge_detector.v:1]
+INFO: [Synth 8-256] done synthesizing module 'button_parser' (5#1) [/home/cc/eecs151/fa18/class/eecs151-abp/Desktop/ee251_labs/fpga_labs_fa18/lab4/lab4.srcs/sources_1/new/button_parser.v:4]
+WARNING: [Synth 8-3848] Net aud_pwm in module/entity debouncer_fpga_test does not have driver. [/home/cc/eecs151/fa18/class/eecs151-abp/Desktop/ee251_labs/fpga_labs_fa18/lab4/lab4.srcs/sources_1/new/debouncer_fpga_test.v:8]
+WARNING: [Synth 8-3848] Net aud_sd in module/entity debouncer_fpga_test does not have driver. [/home/cc/eecs151/fa18/class/eecs151-abp/Desktop/ee251_labs/fpga_labs_fa18/lab4/lab4.srcs/sources_1/new/debouncer_fpga_test.v:9]
+INFO: [Synth 8-256] done synthesizing module 'debouncer_fpga_test' (6#1) [/home/cc/eecs151/fa18/class/eecs151-abp/Desktop/ee251_labs/fpga_labs_fa18/lab4/lab4.srcs/sources_1/new/debouncer_fpga_test.v:3]
+WARNING: [Synth 8-3331] design debouncer_fpga_test has unconnected port aud_pwm
+WARNING: [Synth 8-3331] design debouncer_fpga_test has unconnected port aud_sd
+WARNING: [Synth 8-3331] design debouncer_fpga_test has unconnected port SWITCHES[1]
+WARNING: [Synth 8-3331] design debouncer_fpga_test has unconnected port SWITCHES[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1401.336 ; gain = 123.594 ; free physical = 2669 ; free virtual = 11526
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1401.336 ; gain = 123.594 ; free physical = 2670 ; free virtual = 11527
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/cc/eecs151/fa18/class/eecs151-abp/Desktop/ee251_labs/fpga_labs_fa18/lab4/lab4.srcs/constrs_1/imports/constrs_1/PYNQ-Z1_C.xdc]
+Finished Parsing XDC File [/home/cc/eecs151/fa18/class/eecs151-abp/Desktop/ee251_labs/fpga_labs_fa18/lab4/lab4.srcs/constrs_1/imports/constrs_1/PYNQ-Z1_C.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/cc/eecs151/fa18/class/eecs151-abp/Desktop/ee251_labs/fpga_labs_fa18/lab4/lab4.srcs/constrs_1/imports/constrs_1/PYNQ-Z1_C.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/debouncer_fpga_test_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/debouncer_fpga_test_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1764.188 ; gain = 0.000 ; free physical = 2299 ; free virtual = 11156
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:29 ; elapsed = 00:01:06 . Memory (MB): peak = 1764.188 ; gain = 486.445 ; free physical = 2470 ; free virtual = 11327
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:29 ; elapsed = 00:01:06 . Memory (MB): peak = 1764.188 ; gain = 486.445 ; free physical = 2470 ; free virtual = 11327
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:01:06 . Memory (MB): peak = 1764.188 ; gain = 486.445 ; free physical = 2470 ; free virtual = 11326
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element wrap_counter_reg was removed.  [/home/cc/eecs151/fa18/class/eecs151-abp/Desktop/ee251_labs/fpga_labs_fa18/lab4/lab4.srcs/sources_1/new/debouncer.v:13]
+WARNING: [Synth 8-6014] Unused sequential element loop[0].sat_counter_reg[0] was removed.  [/home/cc/eecs151/fa18/class/eecs151-abp/Desktop/ee251_labs/fpga_labs_fa18/lab4/lab4.srcs/sources_1/new/debouncer.v:88]
+WARNING: [Synth 8-6014] Unused sequential element loop[1].sat_counter_reg[1] was removed.  [/home/cc/eecs151/fa18/class/eecs151-abp/Desktop/ee251_labs/fpga_labs_fa18/lab4/lab4.srcs/sources_1/new/debouncer.v:88]
+WARNING: [Synth 8-6014] Unused sequential element loop[2].sat_counter_reg[2] was removed.  [/home/cc/eecs151/fa18/class/eecs151-abp/Desktop/ee251_labs/fpga_labs_fa18/lab4/lab4.srcs/sources_1/new/debouncer.v:88]
+WARNING: [Synth 8-6014] Unused sequential element loop[3].sat_counter_reg[3] was removed.  [/home/cc/eecs151/fa18/class/eecs151-abp/Desktop/ee251_labs/fpga_labs_fa18/lab4/lab4.srcs/sources_1/new/debouncer.v:88]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/cc/eecs151/fa18/class/eecs151-abp/Desktop/ee251_labs/fpga_labs_fa18/lab4/lab4.srcs/sources_1/new/debouncer_fpga_test.v:30]
+WARNING: [Synth 8-6014] Unused sequential element number_reg was removed.  [/home/cc/eecs151/fa18/class/eecs151-abp/Desktop/ee251_labs/fpga_labs_fa18/lab4/lab4.srcs/sources_1/new/debouncer_fpga_test.v:30]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:29 ; elapsed = 00:01:06 . Memory (MB): peak = 1764.188 ; gain = 486.445 ; free physical = 2463 ; free virtual = 11320
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 4     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 4     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module debouncer_fpga_test 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	                6 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module synchronizer 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 2     
+Module debouncer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 4     
++---Registers : 
+	                8 Bit    Registers := 4     
+Module edge_detector 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element b_parser/button_debouncer/pg/wrap_counter_reg was removed.  [/home/cc/eecs151/fa18/class/eecs151-abp/Desktop/ee251_labs/fpga_labs_fa18/lab4/lab4.srcs/sources_1/new/debouncer.v:13]
+WARNING: [Synth 8-6014] Unused sequential element b_parser/button_debouncer/loop[0].sat_counter_reg[0] was removed.  [/home/cc/eecs151/fa18/class/eecs151-abp/Desktop/ee251_labs/fpga_labs_fa18/lab4/lab4.srcs/sources_1/new/debouncer.v:88]
+WARNING: [Synth 8-6014] Unused sequential element b_parser/button_debouncer/loop[1].sat_counter_reg[1] was removed.  [/home/cc/eecs151/fa18/class/eecs151-abp/Desktop/ee251_labs/fpga_labs_fa18/lab4/lab4.srcs/sources_1/new/debouncer.v:88]
+WARNING: [Synth 8-6014] Unused sequential element b_parser/button_debouncer/loop[2].sat_counter_reg[2] was removed.  [/home/cc/eecs151/fa18/class/eecs151-abp/Desktop/ee251_labs/fpga_labs_fa18/lab4/lab4.srcs/sources_1/new/debouncer.v:88]
+WARNING: [Synth 8-6014] Unused sequential element b_parser/button_debouncer/loop[3].sat_counter_reg[3] was removed.  [/home/cc/eecs151/fa18/class/eecs151-abp/Desktop/ee251_labs/fpga_labs_fa18/lab4/lab4.srcs/sources_1/new/debouncer.v:88]
+WARNING: [Synth 8-6014] Unused sequential element number_reg was removed.  [/home/cc/eecs151/fa18/class/eecs151-abp/Desktop/ee251_labs/fpga_labs_fa18/lab4/lab4.srcs/sources_1/new/debouncer_fpga_test.v:30]
+WARNING: [Synth 8-3331] design debouncer_fpga_test has unconnected port aud_pwm
+WARNING: [Synth 8-3331] design debouncer_fpga_test has unconnected port aud_sd
+WARNING: [Synth 8-3331] design debouncer_fpga_test has unconnected port SWITCHES[1]
+WARNING: [Synth 8-3331] design debouncer_fpga_test has unconnected port SWITCHES[0]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:01:07 . Memory (MB): peak = 1764.188 ; gain = 486.445 ; free physical = 2446 ; free virtual = 11303
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:01:21 . Memory (MB): peak = 1764.188 ; gain = 486.445 ; free physical = 2320 ; free virtual = 11176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:01:21 . Memory (MB): peak = 1764.188 ; gain = 486.445 ; free physical = 2316 ; free virtual = 11173
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:01:22 . Memory (MB): peak = 1764.188 ; gain = 486.445 ; free physical = 2315 ; free virtual = 11172
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:01:22 . Memory (MB): peak = 1764.188 ; gain = 486.445 ; free physical = 2316 ; free virtual = 11173
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:01:22 . Memory (MB): peak = 1764.188 ; gain = 486.445 ; free physical = 2316 ; free virtual = 11173
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:01:22 . Memory (MB): peak = 1764.188 ; gain = 486.445 ; free physical = 2316 ; free virtual = 11173
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:01:22 . Memory (MB): peak = 1764.188 ; gain = 486.445 ; free physical = 2316 ; free virtual = 11173
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:01:22 . Memory (MB): peak = 1764.188 ; gain = 486.445 ; free physical = 2316 ; free virtual = 11173
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:01:22 . Memory (MB): peak = 1764.188 ; gain = 486.445 ; free physical = 2316 ; free virtual = 11173
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     5|
+|3     |LUT1   |    10|
+|4     |LUT2   |    13|
+|5     |LUT3   |    11|
+|6     |LUT4   |    10|
+|7     |LUT5   |    13|
+|8     |LUT6   |    24|
+|9     |FDRE   |    67|
+|10    |IBUF   |     5|
+|11    |OBUF   |     6|
+|12    |OBUFT  |     2|
++------+-------+------+
+
+Report Instance Areas: 
++------+-------------------------+----------------+------+
+|      |Instance                 |Module          |Cells |
++------+-------------------------+----------------+------+
+|1     |top                      |                |   167|
+|2     |  b_parser               |button_parser   |   146|
+|3     |    button_debouncer     |debouncer       |   130|
+|4     |      pg                 |pulse_generator |    34|
+|5     |    button_edge_detector |edge_detector   |     4|
+|6     |    button_synchronizer  |synchronizer    |    12|
++------+-------------------------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:01:22 . Memory (MB): peak = 1764.188 ; gain = 486.445 ; free physical = 2316 ; free virtual = 11173
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 16 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:36 . Memory (MB): peak = 1764.188 ; gain = 123.594 ; free physical = 2371 ; free virtual = 11228
+Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:01:22 . Memory (MB): peak = 1764.188 ; gain = 486.445 ; free physical = 2379 ; free virtual = 11236
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+25 Infos, 22 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:01:24 . Memory (MB): peak = 1764.191 ; gain = 505.547 ; free physical = 2364 ; free virtual = 11221
+INFO: [Common 17-1381] The checkpoint '/home/cc/eecs151/fa18/class/eecs151-abp/Desktop/ee251_labs/fpga_labs_fa18/lab4/lab4.runs/synth_1/debouncer_fpga_test.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file debouncer_fpga_test_utilization_synth.rpt -pb debouncer_fpga_test_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.14 . Memory (MB): peak = 1794.266 ; gain = 0.000 ; free physical = 2363 ; free virtual = 11220
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 20 19:56:13 2018...

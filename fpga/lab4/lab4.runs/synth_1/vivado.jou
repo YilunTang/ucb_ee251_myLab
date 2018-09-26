@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Thu Sep 20 19:54:36 2018
+# Process ID: 5937
+# Current directory: /home/cc/eecs151/fa18/class/eecs151-abp/Desktop/ee251_labs/fpga_labs_fa18/lab4/lab4.runs/synth_1
+# Command line: vivado -log debouncer_fpga_test.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source debouncer_fpga_test.tcl
+# Log file: /home/cc/eecs151/fa18/class/eecs151-abp/Desktop/ee251_labs/fpga_labs_fa18/lab4/lab4.runs/synth_1/debouncer_fpga_test.vds
+# Journal file: /home/cc/eecs151/fa18/class/eecs151-abp/Desktop/ee251_labs/fpga_labs_fa18/lab4/lab4.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source debouncer_fpga_test.tcl -notrace

@@ -1,0 +1,542 @@
+m255
+K4
+z0
+13
+cModel Technology
+Z0 d/home/cc/eecs151/fa18/class/eecs151-abp/Desktop/ee251_labs/fpga_labs_fa18/lab4/sim/build
+T_opt
+!s110 1537500747
+V_]=bK=1?8oDNKV_ca6Oh43
+04 24 4 work tone_generator_testbench fast 0
+Z1 04 4 4 work glbl fast 0
+=1-002324607356-5ba4664b-5ad93-1cc4
+Z2 o-quiet -auto_acc_if_foreign -work work -L unisims_ver -L unimacro_ver -L secureip
+Z3 tCvgOpt 0
+n@_opt
+Z4 OE;O;10.6b;65
+T_opt1
+!s110 1537497928
+V];Tmd;Ac`c5`0gib8hlLC3
+04 14 4 work sync_testbench fast 0
+R1
+=1-002324607356-5ba45b48-5b9aa-75d7
+R2
+R3
+n@_opt1
+R4
+R0
+T_opt2
+!s110 1537498448
+VFGk;>_DD7c8<]nlJ19o6B1
+04 23 4 work edge_detector_testbench fast 0
+R1
+=1-002324607356-5ba45d50-7f6a0-14fc
+R2
+R3
+n@_opt2
+R4
+R0
+vbutton_parser
+Z5 !s110 1537500746
+!i10b 1
+!s100 >@RCz?b6PD=`:T9k@V>=:3
+I[M9K_96?5WJ33_foSUKoM1
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z7 w1537500264
+8../../lab4.srcs/sources_1/new/button_parser.v
+F../../lab4.srcs/sources_1/new/button_parser.v
+L0 4
+Z8 OE;L;10.6b;65
+r1
+!s85 0
+31
+Z9 !s108 1537500746.000000
+Z10 !s107 ../../lab4.srcs/sources_1/new/util.vh|../../lab4.srcs/sources_1/new/z1top.v|../../lab4.srcs/sources_1/new/tone_generator_testbench.v|../../lab4.srcs/sources_1/new/tone_generator.v|../../lab4.srcs/sources_1/new/synchronizer.v|../../lab4.srcs/sources_1/new/sync_testbench.v|../../lab4.srcs/sources_1/new/shift_register_testbench.v|../../lab4.srcs/sources_1/new/shift_register.v|../../lab4.srcs/sources_1/new/rom.v|../../lab4.srcs/sources_1/new/music_streamer_testbench.v|../../lab4.srcs/sources_1/new/music_streamer.v|../../lab4.srcs/sources_1/new/keypad_decoder_testbench.v|../../lab4.srcs/sources_1/new/keypad_decoder.v|../../lab4.srcs/sources_1/new/edge_detector_testbench.v|../../lab4.srcs/sources_1/new/edge_detector.v|../../lab4.srcs/sources_1/new/debouncer_testbench.v|../../lab4.srcs/sources_1/new/debouncer_fpga_test.v|../../lab4.srcs/sources_1/new/debouncer.v|../../lab4.srcs/sources_1/new/button_parser.v|
+Z11 !s90 +acc|-vmake|-vopt|-source|-O5|-nocovercells|+define+|+incdir+../../lab4.srcs/+incdir+../../lab4.srcs/constrs_1+incdir+../../lab4.srcs/constrs_1/imports+incdir+../../lab4.srcs/constrs_1/imports/constrs_1+incdir+../../lab4.srcs/sources_1+incdir+../../lab4.srcs/sources_1/new|../../lab4.srcs/sources_1/new/button_parser.v|../../lab4.srcs/sources_1/new/debouncer.v|../../lab4.srcs/sources_1/new/debouncer_fpga_test.v|../../lab4.srcs/sources_1/new/debouncer_testbench.v|../../lab4.srcs/sources_1/new/edge_detector.v|../../lab4.srcs/sources_1/new/edge_detector_testbench.v|../../lab4.srcs/sources_1/new/keypad_decoder.v|../../lab4.srcs/sources_1/new/keypad_decoder_testbench.v|../../lab4.srcs/sources_1/new/music_streamer.v|../../lab4.srcs/sources_1/new/music_streamer_testbench.v|../../lab4.srcs/sources_1/new/rom.v|../../lab4.srcs/sources_1/new/shift_register.v|../../lab4.srcs/sources_1/new/shift_register_testbench.v|../../lab4.srcs/sources_1/new/sync_testbench.v|../../lab4.srcs/sources_1/new/synchronizer.v|../../lab4.srcs/sources_1/new/tone_generator.v|../../lab4.srcs/sources_1/new/tone_generator_testbench.v|../../lab4.srcs/sources_1/new/z1top.v|
+!s101 -O5
+!i113 0
+Z12 !s102 -nocovercells
+Z13 o+acc -vmake -source -O5 -nocovercells -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z14 !s92 +acc -vmake -source -O5 -nocovercells +define+ +incdir+../../lab4.srcs/+incdir+../../lab4.srcs/constrs_1+incdir+../../lab4.srcs/constrs_1/imports+incdir+../../lab4.srcs/constrs_1/imports/constrs_1+incdir+../../lab4.srcs/sources_1+incdir+../../lab4.srcs/sources_1/new -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+vchecker
+R5
+!i10b 1
+!s100 n`YJ2bSMPe`W[kY[?m^bU1
+IcUYKhiA_lAkSd0BTdTfFB2
+R6
+R0
+Z15 w1537500395
+Z16 8../../lab4.srcs/sources_1/new/debouncer.v
+Z17 F../../lab4.srcs/sources_1/new/debouncer.v
+Z18 L0 25
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O5
+!i113 0
+R12
+R13
+R14
+R3
+vdebouncer
+R5
+!i10b 1
+!s100 E5D3VUUdg1Ub07PdT<W=_3
+I>[<4941WJk^VLKF5fA1Wl3
+R6
+R0
+R15
+R16
+R17
+L0 47
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O5
+!i113 0
+R12
+R13
+R14
+R3
+vdebouncer_fpga_test
+R5
+!i10b 1
+!s100 EaA<34S8k<[X`Ne0EH^bC2
+IPEWNa6o0SFX8Z_czDK5E]0
+R6
+R0
+R7
+8../../lab4.srcs/sources_1/new/debouncer_fpga_test.v
+F../../lab4.srcs/sources_1/new/debouncer_fpga_test.v
+L0 3
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O5
+!i113 0
+R12
+R13
+R14
+R3
+vdebouncer_testbench
+R5
+!i10b 1
+!s100 C`Ec>BPI3>ndLbGf?_>Gf3
+IJ;Y5HKa`Gf2DO2^eXEhkG1
+R6
+R0
+R7
+8../../lab4.srcs/sources_1/new/debouncer_testbench.v
+F../../lab4.srcs/sources_1/new/debouncer_testbench.v
+L0 13
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O5
+!i113 0
+R12
+R13
+R14
+R3
+vDecoder
+R5
+!i10b 1
+!s100 BblXlcaA6ePMmGD6WeQEW2
+I:SkKKZ?[MAh?_K>4MGQLn3
+R6
+R0
+R7
+8../../lab4.srcs/sources_1/new/keypad_decoder.v
+F../../lab4.srcs/sources_1/new/keypad_decoder.v
+R18
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O5
+!i113 0
+R12
+R13
+R14
+R3
+n@decoder
+vedge_detector
+R5
+!i10b 1
+!s100 LX3LkFfSDIOSQ4dNJMm:V2
+IY;R;mRnS8WK3BbQARAV_z3
+R6
+R0
+R15
+8../../lab4.srcs/sources_1/new/edge_detector.v
+F../../lab4.srcs/sources_1/new/edge_detector.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O5
+!i113 0
+R12
+R13
+R14
+R3
+vedge_detector_testbench
+R5
+!i10b 1
+!s100 _[gBV25k9fJ70b[QTz5G42
+Ib5C32[W7k45AaVKN7hnTB0
+R6
+R0
+R7
+8../../lab4.srcs/sources_1/new/edge_detector_testbench.v
+F../../lab4.srcs/sources_1/new/edge_detector_testbench.v
+L0 6
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O5
+!i113 0
+R12
+R13
+R14
+R3
+vglbl
+!s110 1537497905
+!i10b 1
+!s100 JWZ^meD<P7inSF0<1SiO32
+I2^77@zzM:HNP73OIbMX=M0
+R6
+R0
+w1513215259
+8/opt/Xilinx/Vivado/current/data/verilog/src/glbl.v
+F/opt/Xilinx/Vivado/current/data/verilog/src/glbl.v
+L0 6
+R8
+r1
+!s85 0
+31
+!s108 1537497905.000000
+!s107 /opt/Xilinx/Vivado/current/data/verilog/src/glbl.v|
+!s90 +acc|-vopt|-O5|-source|-nocovercells|/opt/Xilinx/Vivado/current/data/verilog/src/glbl.v|
+!s101 -O5
+!i113 0
+R12
+o+acc -O5 -source -nocovercells -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+vkeypad_decoder_testbench
+R5
+!i10b 1
+!s100 j82FfV3J<9TdR4X_M=l^J2
+INZBS>>>dK<oRPgn59li<l3
+R6
+R0
+R7
+8../../lab4.srcs/sources_1/new/keypad_decoder_testbench.v
+F../../lab4.srcs/sources_1/new/keypad_decoder_testbench.v
+L0 3
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O5
+!i113 0
+R12
+R13
+R14
+R3
+vmusic_streamer
+R5
+!i10b 1
+!s100 zSG4:Eb_QaO9>Sk`ZoM8b3
+I7WfaS59j;Zgi6U:iH<XA_0
+R6
+R0
+w1537500550
+8../../lab4.srcs/sources_1/new/music_streamer.v
+F../../lab4.srcs/sources_1/new/music_streamer.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O5
+!i113 0
+R12
+R13
+R14
+R3
+vmusic_streamer_testbench
+R5
+!i10b 1
+!s100 Fe]>kH4DSHJ8noILnDIR81
+I`DhTeHLN^4T[G@zZ8j08B2
+R6
+R0
+R7
+8../../lab4.srcs/sources_1/new/music_streamer_testbench.v
+F../../lab4.srcs/sources_1/new/music_streamer_testbench.v
+L0 7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O5
+!i113 0
+R12
+R13
+R14
+R3
+vpulse_generator
+R5
+!i10b 1
+!s100 Jl]PMe6GY9Cki<>?c6Nnz3
+I]jPzA;@=>IPYR8fIjld1c0
+R6
+R0
+R15
+R16
+R17
+L0 4
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O5
+!i113 0
+R12
+R13
+R14
+R3
+vrom
+R5
+!i10b 1
+!s100 nMdKMzNXV:6G[k>13hez80
+I_Az?WC@4o^_]Eacj<aRU@3
+R6
+R0
+R7
+8../../lab4.srcs/sources_1/new/rom.v
+F../../lab4.srcs/sources_1/new/rom.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O5
+!i113 0
+R12
+R13
+R14
+R3
+vshift_register
+R5
+!i10b 1
+!s100 Ao[bEWGBC1gin1A1h[?cM3
+IHD7i@;QIcl?<ceW16n_Z91
+R6
+R0
+R7
+8../../lab4.srcs/sources_1/new/shift_register.v
+F../../lab4.srcs/sources_1/new/shift_register.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O5
+!i113 0
+R12
+R13
+R14
+R3
+vshift_register_testbench
+R5
+!i10b 1
+!s100 T>Cazi4lIBDFnCVU3NnlP3
+I0DA@4QOgFd1:g9ATF6?_G1
+R6
+R0
+R7
+8../../lab4.srcs/sources_1/new/shift_register_testbench.v
+F../../lab4.srcs/sources_1/new/shift_register_testbench.v
+L0 8
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O5
+!i113 0
+R12
+R13
+R14
+R3
+vsync_testbench
+R5
+!i10b 1
+!s100 f5O<m4=z]TWdhQ[l5?V6K3
+I2ofaDL[1bTJlNeX[D>@@_0
+R6
+R0
+R7
+8../../lab4.srcs/sources_1/new/sync_testbench.v
+F../../lab4.srcs/sources_1/new/sync_testbench.v
+L0 12
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O5
+!i113 0
+R12
+R13
+R14
+R3
+vsynchronizer
+R5
+!i10b 1
+!s100 6a?[<K2<c_Mz<FHlJjBi01
+I2A9=_7oS4Xl`maSi^VPO03
+R6
+R0
+R15
+8../../lab4.srcs/sources_1/new/synchronizer.v
+F../../lab4.srcs/sources_1/new/synchronizer.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O5
+!i113 0
+R12
+R13
+R14
+R3
+vtone_generator
+R5
+!i10b 1
+!s100 Yf5bA0E;]QoFoAY]`zRJA2
+I59@g1>XM^G8bT[YzgHjEg1
+R6
+R0
+w1537500656
+8../../lab4.srcs/sources_1/new/tone_generator.v
+F../../lab4.srcs/sources_1/new/tone_generator.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O5
+!i113 0
+R12
+R13
+R14
+R3
+vtone_generator_testbench
+R5
+!i10b 1
+!s100 ^cRUoJlJAV4QTFQ5Yo?YS2
+IDROdoZ<NYeXM:N6D>o?0R0
+R6
+R0
+R7
+8../../lab4.srcs/sources_1/new/tone_generator_testbench.v
+F../../lab4.srcs/sources_1/new/tone_generator_testbench.v
+L0 7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O5
+!i113 0
+R12
+R13
+R14
+R3
+vz1top
+R5
+!i10b 1
+!s100 BdAzQ]nPa1n968>;Rl45P2
+ITUlSPPQ]731C`a4GbCGf]3
+R6
+R0
+R7
+8../../lab4.srcs/sources_1/new/z1top.v
+F../../lab4.srcs/sources_1/new/z1top.v
+L0 3
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O5
+!i113 0
+R12
+R13
+R14
+R3
