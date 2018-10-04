@@ -1,0 +1,78 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
+| Date         : Thu Sep 27 18:23:15 2018
+| Host         : c125m-14.EECS.Berkeley.EDU running 64-bit CentOS release 6.10 (Final)
+| Command      : report_control_sets -verbose -file z1top_control_sets_placed.rpt
+| Design       : z1top
+| Device       : xc7z020
+---------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    13 |
+| Unused register locations in slices containing registers |    32 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              22 |           12 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              31 |           11 |
+| Yes          | No                    | No                     |              17 |            3 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              50 |           15 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++----------------------------+---------------------------------------------------------------+---------------------------------------------------------------+------------------+----------------+
+|        Clock Signal        |                         Enable Signal                         |                        Set/Reset Signal                       | Slice Load Count | Bel Load Count |
++----------------------------+---------------------------------------------------------------+---------------------------------------------------------------+------------------+----------------+
+|  CLK_125MHZ_FPGA_IBUF_BUFG |                                                               | b_parser/button_debouncer/reset                               |                3 |              3 |
+|  CLK_125MHZ_FPGA_IBUF_BUFG | on_chip_uart/uatransmit/clock_counter[5]_i_2_n_0              | on_chip_uart/uatransmit/clock_counter[5]_i_1_n_0              |                1 |              5 |
+|  CLK_125MHZ_FPGA_IBUF_BUFG | on_chip_uart/uatransmit/clock_counter[5]_i_2_n_0              | b_parser/button_debouncer/clock_counter_reg[9]_0              |                3 |              5 |
+|  CLK_125MHZ_FPGA_IBUF_BUFG | b_parser/button_debouncer/pg/loop[3].sat_counter_reg[3][0][0] | b_parser/button_synchronizer/loop[3].sat_counter_reg[3][7][0] |                2 |              8 |
+|  CLK_125MHZ_FPGA_IBUF_BUFG | b_parser/button_debouncer/pg/E[0]                             | b_parser/button_synchronizer/SR[0]                            |                2 |              8 |
+|  CLK_125MHZ_FPGA_IBUF_BUFG | b_parser/button_debouncer/pg/loop[1].sat_counter_reg[1][0][0] | b_parser/button_synchronizer/loop[1].sat_counter_reg[1][0][0] |                3 |              8 |
+|  CLK_125MHZ_FPGA_IBUF_BUFG | b_parser/button_debouncer/pg/loop[2].sat_counter_reg[2][0][0] | b_parser/button_synchronizer/loop[2].sat_counter_reg[2][0][0] |                2 |              8 |
+|  CLK_125MHZ_FPGA_IBUF_BUFG | on_chip_uart/uatransmit/E[0]                                  | b_parser/button_debouncer/reset                               |                2 |              8 |
+|  CLK_125MHZ_FPGA_IBUF_BUFG | char[7]_i_1_n_0                                               |                                                               |                1 |              8 |
+|  CLK_125MHZ_FPGA_IBUF_BUFG | on_chip_uart/uareceive/rx_shift0                              |                                                               |                2 |              9 |
+|  CLK_125MHZ_FPGA_IBUF_BUFG |                                                               | on_chip_uart/uareceive/clock_counter[10]_i_1_n_0              |                3 |             11 |
+|  CLK_125MHZ_FPGA_IBUF_BUFG |                                                               | b_parser/button_debouncer/pg/clear                            |                5 |             17 |
+|  CLK_125MHZ_FPGA_IBUF_BUFG |                                                               |                                                               |               12 |             22 |
++----------------------------+---------------------------------------------------------------+---------------------------------------------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 3      |                     1 |
+| 5      |                     2 |
+| 8      |                     6 |
+| 9      |                     1 |
+| 11     |                     1 |
+| 16+    |                     2 |
++--------+-----------------------+
+
+

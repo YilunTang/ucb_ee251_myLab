@@ -1,0 +1,1347 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
+| Date         : Thu Sep 27 18:23:44 2018
+| Host         : c125m-14.EECS.Berkeley.EDU running 64-bit CentOS release 6.10 (Final)
+| Command      : report_timing_summary -max_paths 10 -file z1top_timing_summary_routed.rpt -rpx z1top_timing_summary_routed.rpx -warn_on_violation
+| Design       : z1top
+| Device       : 7z020-clg400
+| Speed File   : -3  PRODUCTION 1.11 2014-09-11
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  false
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There are 5 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There is 1 port with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      4.575        0.000                      0                  263        0.151        0.000                      0                  263        3.500        0.000                       0                   121  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock        Waveform(ns)         Period(ns)      Frequency(MHz)
+-----        ------------         ----------      --------------
+sys_clk_pin  {0.000 4.000}        8.000           125.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+sys_clk_pin         4.575        0.000                      0                  263        0.151        0.000                      0                  263        3.500        0.000                       0                   121  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  sys_clk_pin
+  To Clock:  sys_clk_pin
+
+Setup :            0  Failing Endpoints,  Worst Slack        4.575ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.151ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        3.500ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             4.575ns  (required time - arrival time)
+  Source:                 on_chip_uart/uatransmit/clock_counter_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            on_chip_uart/uatransmit/clock_counter_reg[0]/R
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (sys_clk_pin rise@8.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        3.076ns  (logic 1.029ns (33.456%)  route 2.047ns (66.544%))
+  Logic Levels:           3  (LUT2=1 LUT4=1 LUT5=1)
+  Clock Path Skew:        0.000ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.458ns = ( 12.458 - 8.000 ) 
+    Source Clock Delay      (SCD):    4.869ns
+    Clock Pessimism Removal (CPR):    0.411ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK_125MHZ_FPGA (IN)
+                         net (fo=0)                   0.000     0.000    CLK_125MHZ_FPGA
+    H16                  IBUF (Prop_ibuf_I_O)         1.299     1.299 r  CLK_125MHZ_FPGA_IBUF_inst/O
+                         net (fo=1, routed)           1.930     3.229    CLK_125MHZ_FPGA_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.079     3.308 r  CLK_125MHZ_FPGA_IBUF_BUFG_inst/O
+                         net (fo=120, routed)         1.561     4.869    on_chip_uart/uatransmit/CLK_125MHZ_FPGA_IBUF_BUFG
+    SLICE_X107Y128       FDRE                                         r  on_chip_uart/uatransmit/clock_counter_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X107Y128       FDRE (Prop_fdre_C_Q)         0.313     5.182 r  on_chip_uart/uatransmit/clock_counter_reg[4]/Q
+                         net (fo=7, routed)           0.846     6.028    on_chip_uart/uatransmit/clock_counter_reg_n_0_[4]
+    SLICE_X107Y128       LUT4 (Prop_lut4_I3_O)        0.216     6.244 f  on_chip_uart/uatransmit/clock_counter[5]_i_6/O
+                         net (fo=3, routed)           0.491     6.735    on_chip_uart/uatransmit/clock_counter[5]_i_6_n_0
+    SLICE_X107Y129       LUT5 (Prop_lut5_I3_O)        0.261     6.996 r  on_chip_uart/uatransmit/clock_counter[5]_i_4/O
+                         net (fo=2, routed)           0.465     7.461    on_chip_uart/uatransmit/clock_counter[5]_i_4_n_0
+    SLICE_X107Y128       LUT2 (Prop_lut2_I0_O)        0.239     7.700 r  on_chip_uart/uatransmit/clock_counter[5]_i_1/O
+                         net (fo=5, routed)           0.245     7.944    on_chip_uart/uatransmit/clock_counter[5]_i_1_n_0
+    SLICE_X107Y128       FDRE                                         r  on_chip_uart/uatransmit/clock_counter_reg[0]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      8.000     8.000 r  
+    H16                                               0.000     8.000 r  CLK_125MHZ_FPGA (IN)
+                         net (fo=0)                   0.000     8.000    CLK_125MHZ_FPGA
+    H16                  IBUF (Prop_ibuf_I_O)         1.232     9.232 r  CLK_125MHZ_FPGA_IBUF_inst/O
+                         net (fo=1, routed)           1.751    10.983    CLK_125MHZ_FPGA_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.072    11.055 r  CLK_125MHZ_FPGA_IBUF_BUFG_inst/O
+                         net (fo=120, routed)         1.403    12.458    on_chip_uart/uatransmit/CLK_125MHZ_FPGA_IBUF_BUFG
+    SLICE_X107Y128       FDRE                                         r  on_chip_uart/uatransmit/clock_counter_reg[0]/C
+                         clock pessimism              0.411    12.869    
+                         clock uncertainty           -0.035    12.833    
+    SLICE_X107Y128       FDRE (Setup_fdre_C_R)       -0.314    12.519    on_chip_uart/uatransmit/clock_counter_reg[0]
+  -------------------------------------------------------------------
+                         required time                         12.519    
+                         arrival time                          -7.944    
+  -------------------------------------------------------------------
+                         slack                                  4.575    
+
+Slack (MET) :             4.575ns  (required time - arrival time)
+  Source:                 on_chip_uart/uatransmit/clock_counter_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            on_chip_uart/uatransmit/clock_counter_reg[2]/R
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (sys_clk_pin rise@8.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        3.076ns  (logic 1.029ns (33.456%)  route 2.047ns (66.544%))
+  Logic Levels:           3  (LUT2=1 LUT4=1 LUT5=1)
+  Clock Path Skew:        0.000ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.458ns = ( 12.458 - 8.000 ) 
+    Source Clock Delay      (SCD):    4.869ns
+    Clock Pessimism Removal (CPR):    0.411ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK_125MHZ_FPGA (IN)
+                         net (fo=0)                   0.000     0.000    CLK_125MHZ_FPGA
+    H16                  IBUF (Prop_ibuf_I_O)         1.299     1.299 r  CLK_125MHZ_FPGA_IBUF_inst/O
+                         net (fo=1, routed)           1.930     3.229    CLK_125MHZ_FPGA_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.079     3.308 r  CLK_125MHZ_FPGA_IBUF_BUFG_inst/O
+                         net (fo=120, routed)         1.561     4.869    on_chip_uart/uatransmit/CLK_125MHZ_FPGA_IBUF_BUFG
+    SLICE_X107Y128       FDRE                                         r  on_chip_uart/uatransmit/clock_counter_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X107Y128       FDRE (Prop_fdre_C_Q)         0.313     5.182 r  on_chip_uart/uatransmit/clock_counter_reg[4]/Q
+                         net (fo=7, routed)           0.846     6.028    on_chip_uart/uatransmit/clock_counter_reg_n_0_[4]
+    SLICE_X107Y128       LUT4 (Prop_lut4_I3_O)        0.216     6.244 f  on_chip_uart/uatransmit/clock_counter[5]_i_6/O
+                         net (fo=3, routed)           0.491     6.735    on_chip_uart/uatransmit/clock_counter[5]_i_6_n_0
+    SLICE_X107Y129       LUT5 (Prop_lut5_I3_O)        0.261     6.996 r  on_chip_uart/uatransmit/clock_counter[5]_i_4/O
+                         net (fo=2, routed)           0.465     7.461    on_chip_uart/uatransmit/clock_counter[5]_i_4_n_0
+    SLICE_X107Y128       LUT2 (Prop_lut2_I0_O)        0.239     7.700 r  on_chip_uart/uatransmit/clock_counter[5]_i_1/O
+                         net (fo=5, routed)           0.245     7.944    on_chip_uart/uatransmit/clock_counter[5]_i_1_n_0
+    SLICE_X107Y128       FDRE                                         r  on_chip_uart/uatransmit/clock_counter_reg[2]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      8.000     8.000 r  
+    H16                                               0.000     8.000 r  CLK_125MHZ_FPGA (IN)
+                         net (fo=0)                   0.000     8.000    CLK_125MHZ_FPGA
+    H16                  IBUF (Prop_ibuf_I_O)         1.232     9.232 r  CLK_125MHZ_FPGA_IBUF_inst/O
+                         net (fo=1, routed)           1.751    10.983    CLK_125MHZ_FPGA_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.072    11.055 r  CLK_125MHZ_FPGA_IBUF_BUFG_inst/O
+                         net (fo=120, routed)         1.403    12.458    on_chip_uart/uatransmit/CLK_125MHZ_FPGA_IBUF_BUFG
+    SLICE_X107Y128       FDRE                                         r  on_chip_uart/uatransmit/clock_counter_reg[2]/C
+                         clock pessimism              0.411    12.869    
+                         clock uncertainty           -0.035    12.833    
+    SLICE_X107Y128       FDRE (Setup_fdre_C_R)       -0.314    12.519    on_chip_uart/uatransmit/clock_counter_reg[2]
+  -------------------------------------------------------------------
+                         required time                         12.519    
+                         arrival time                          -7.944    
+  -------------------------------------------------------------------
+                         slack                                  4.575    
+
+Slack (MET) :             4.575ns  (required time - arrival time)
+  Source:                 on_chip_uart/uatransmit/clock_counter_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            on_chip_uart/uatransmit/clock_counter_reg[3]/R
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (sys_clk_pin rise@8.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        3.076ns  (logic 1.029ns (33.456%)  route 2.047ns (66.544%))
+  Logic Levels:           3  (LUT2=1 LUT4=1 LUT5=1)
+  Clock Path Skew:        0.000ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.458ns = ( 12.458 - 8.000 ) 
+    Source Clock Delay      (SCD):    4.869ns
+    Clock Pessimism Removal (CPR):    0.411ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK_125MHZ_FPGA (IN)
+                         net (fo=0)                   0.000     0.000    CLK_125MHZ_FPGA
+    H16                  IBUF (Prop_ibuf_I_O)         1.299     1.299 r  CLK_125MHZ_FPGA_IBUF_inst/O
+                         net (fo=1, routed)           1.930     3.229    CLK_125MHZ_FPGA_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.079     3.308 r  CLK_125MHZ_FPGA_IBUF_BUFG_inst/O
+                         net (fo=120, routed)         1.561     4.869    on_chip_uart/uatransmit/CLK_125MHZ_FPGA_IBUF_BUFG
+    SLICE_X107Y128       FDRE                                         r  on_chip_uart/uatransmit/clock_counter_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X107Y128       FDRE (Prop_fdre_C_Q)         0.313     5.182 r  on_chip_uart/uatransmit/clock_counter_reg[4]/Q
+                         net (fo=7, routed)           0.846     6.028    on_chip_uart/uatransmit/clock_counter_reg_n_0_[4]
+    SLICE_X107Y128       LUT4 (Prop_lut4_I3_O)        0.216     6.244 f  on_chip_uart/uatransmit/clock_counter[5]_i_6/O
+                         net (fo=3, routed)           0.491     6.735    on_chip_uart/uatransmit/clock_counter[5]_i_6_n_0
+    SLICE_X107Y129       LUT5 (Prop_lut5_I3_O)        0.261     6.996 r  on_chip_uart/uatransmit/clock_counter[5]_i_4/O
+                         net (fo=2, routed)           0.465     7.461    on_chip_uart/uatransmit/clock_counter[5]_i_4_n_0
+    SLICE_X107Y128       LUT2 (Prop_lut2_I0_O)        0.239     7.700 r  on_chip_uart/uatransmit/clock_counter[5]_i_1/O
+                         net (fo=5, routed)           0.245     7.944    on_chip_uart/uatransmit/clock_counter[5]_i_1_n_0
+    SLICE_X107Y128       FDRE                                         r  on_chip_uart/uatransmit/clock_counter_reg[3]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      8.000     8.000 r  
+    H16                                               0.000     8.000 r  CLK_125MHZ_FPGA (IN)
+                         net (fo=0)                   0.000     8.000    CLK_125MHZ_FPGA
+    H16                  IBUF (Prop_ibuf_I_O)         1.232     9.232 r  CLK_125MHZ_FPGA_IBUF_inst/O
+                         net (fo=1, routed)           1.751    10.983    CLK_125MHZ_FPGA_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.072    11.055 r  CLK_125MHZ_FPGA_IBUF_BUFG_inst/O
+                         net (fo=120, routed)         1.403    12.458    on_chip_uart/uatransmit/CLK_125MHZ_FPGA_IBUF_BUFG
+    SLICE_X107Y128       FDRE                                         r  on_chip_uart/uatransmit/clock_counter_reg[3]/C
+                         clock pessimism              0.411    12.869    
+                         clock uncertainty           -0.035    12.833    
+    SLICE_X107Y128       FDRE (Setup_fdre_C_R)       -0.314    12.519    on_chip_uart/uatransmit/clock_counter_reg[3]
+  -------------------------------------------------------------------
+                         required time                         12.519    
+                         arrival time                          -7.944    
+  -------------------------------------------------------------------
+                         slack                                  4.575    
+
+Slack (MET) :             4.575ns  (required time - arrival time)
+  Source:                 on_chip_uart/uatransmit/clock_counter_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            on_chip_uart/uatransmit/clock_counter_reg[4]/R
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (sys_clk_pin rise@8.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        3.076ns  (logic 1.029ns (33.456%)  route 2.047ns (66.544%))
+  Logic Levels:           3  (LUT2=1 LUT4=1 LUT5=1)
+  Clock Path Skew:        0.000ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.458ns = ( 12.458 - 8.000 ) 
+    Source Clock Delay      (SCD):    4.869ns
+    Clock Pessimism Removal (CPR):    0.411ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK_125MHZ_FPGA (IN)
+                         net (fo=0)                   0.000     0.000    CLK_125MHZ_FPGA
+    H16                  IBUF (Prop_ibuf_I_O)         1.299     1.299 r  CLK_125MHZ_FPGA_IBUF_inst/O
+                         net (fo=1, routed)           1.930     3.229    CLK_125MHZ_FPGA_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.079     3.308 r  CLK_125MHZ_FPGA_IBUF_BUFG_inst/O
+                         net (fo=120, routed)         1.561     4.869    on_chip_uart/uatransmit/CLK_125MHZ_FPGA_IBUF_BUFG
+    SLICE_X107Y128       FDRE                                         r  on_chip_uart/uatransmit/clock_counter_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X107Y128       FDRE (Prop_fdre_C_Q)         0.313     5.182 r  on_chip_uart/uatransmit/clock_counter_reg[4]/Q
+                         net (fo=7, routed)           0.846     6.028    on_chip_uart/uatransmit/clock_counter_reg_n_0_[4]
+    SLICE_X107Y128       LUT4 (Prop_lut4_I3_O)        0.216     6.244 f  on_chip_uart/uatransmit/clock_counter[5]_i_6/O
+                         net (fo=3, routed)           0.491     6.735    on_chip_uart/uatransmit/clock_counter[5]_i_6_n_0
+    SLICE_X107Y129       LUT5 (Prop_lut5_I3_O)        0.261     6.996 r  on_chip_uart/uatransmit/clock_counter[5]_i_4/O
+                         net (fo=2, routed)           0.465     7.461    on_chip_uart/uatransmit/clock_counter[5]_i_4_n_0
+    SLICE_X107Y128       LUT2 (Prop_lut2_I0_O)        0.239     7.700 r  on_chip_uart/uatransmit/clock_counter[5]_i_1/O
+                         net (fo=5, routed)           0.245     7.944    on_chip_uart/uatransmit/clock_counter[5]_i_1_n_0
+    SLICE_X107Y128       FDRE                                         r  on_chip_uart/uatransmit/clock_counter_reg[4]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      8.000     8.000 r  
+    H16                                               0.000     8.000 r  CLK_125MHZ_FPGA (IN)
+                         net (fo=0)                   0.000     8.000    CLK_125MHZ_FPGA
+    H16                  IBUF (Prop_ibuf_I_O)         1.232     9.232 r  CLK_125MHZ_FPGA_IBUF_inst/O
+                         net (fo=1, routed)           1.751    10.983    CLK_125MHZ_FPGA_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.072    11.055 r  CLK_125MHZ_FPGA_IBUF_BUFG_inst/O
+                         net (fo=120, routed)         1.403    12.458    on_chip_uart/uatransmit/CLK_125MHZ_FPGA_IBUF_BUFG
+    SLICE_X107Y128       FDRE                                         r  on_chip_uart/uatransmit/clock_counter_reg[4]/C
+                         clock pessimism              0.411    12.869    
+                         clock uncertainty           -0.035    12.833    
+    SLICE_X107Y128       FDRE (Setup_fdre_C_R)       -0.314    12.519    on_chip_uart/uatransmit/clock_counter_reg[4]
+  -------------------------------------------------------------------
+                         required time                         12.519    
+                         arrival time                          -7.944    
+  -------------------------------------------------------------------
+                         slack                                  4.575    
+
+Slack (MET) :             4.575ns  (required time - arrival time)
+  Source:                 on_chip_uart/uatransmit/clock_counter_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            on_chip_uart/uatransmit/clock_counter_reg[5]/R
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (sys_clk_pin rise@8.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        3.076ns  (logic 1.029ns (33.456%)  route 2.047ns (66.544%))
+  Logic Levels:           3  (LUT2=1 LUT4=1 LUT5=1)
+  Clock Path Skew:        0.000ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.458ns = ( 12.458 - 8.000 ) 
+    Source Clock Delay      (SCD):    4.869ns
+    Clock Pessimism Removal (CPR):    0.411ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK_125MHZ_FPGA (IN)
+                         net (fo=0)                   0.000     0.000    CLK_125MHZ_FPGA
+    H16                  IBUF (Prop_ibuf_I_O)         1.299     1.299 r  CLK_125MHZ_FPGA_IBUF_inst/O
+                         net (fo=1, routed)           1.930     3.229    CLK_125MHZ_FPGA_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.079     3.308 r  CLK_125MHZ_FPGA_IBUF_BUFG_inst/O
+                         net (fo=120, routed)         1.561     4.869    on_chip_uart/uatransmit/CLK_125MHZ_FPGA_IBUF_BUFG
+    SLICE_X107Y128       FDRE                                         r  on_chip_uart/uatransmit/clock_counter_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X107Y128       FDRE (Prop_fdre_C_Q)         0.313     5.182 r  on_chip_uart/uatransmit/clock_counter_reg[4]/Q
+                         net (fo=7, routed)           0.846     6.028    on_chip_uart/uatransmit/clock_counter_reg_n_0_[4]
+    SLICE_X107Y128       LUT4 (Prop_lut4_I3_O)        0.216     6.244 f  on_chip_uart/uatransmit/clock_counter[5]_i_6/O
+                         net (fo=3, routed)           0.491     6.735    on_chip_uart/uatransmit/clock_counter[5]_i_6_n_0
+    SLICE_X107Y129       LUT5 (Prop_lut5_I3_O)        0.261     6.996 r  on_chip_uart/uatransmit/clock_counter[5]_i_4/O
+                         net (fo=2, routed)           0.465     7.461    on_chip_uart/uatransmit/clock_counter[5]_i_4_n_0
+    SLICE_X107Y128       LUT2 (Prop_lut2_I0_O)        0.239     7.700 r  on_chip_uart/uatransmit/clock_counter[5]_i_1/O
+                         net (fo=5, routed)           0.245     7.944    on_chip_uart/uatransmit/clock_counter[5]_i_1_n_0
+    SLICE_X107Y128       FDRE                                         r  on_chip_uart/uatransmit/clock_counter_reg[5]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      8.000     8.000 r  
+    H16                                               0.000     8.000 r  CLK_125MHZ_FPGA (IN)
+                         net (fo=0)                   0.000     8.000    CLK_125MHZ_FPGA
+    H16                  IBUF (Prop_ibuf_I_O)         1.232     9.232 r  CLK_125MHZ_FPGA_IBUF_inst/O
+                         net (fo=1, routed)           1.751    10.983    CLK_125MHZ_FPGA_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.072    11.055 r  CLK_125MHZ_FPGA_IBUF_BUFG_inst/O
+                         net (fo=120, routed)         1.403    12.458    on_chip_uart/uatransmit/CLK_125MHZ_FPGA_IBUF_BUFG
+    SLICE_X107Y128       FDRE                                         r  on_chip_uart/uatransmit/clock_counter_reg[5]/C
+                         clock pessimism              0.411    12.869    
+                         clock uncertainty           -0.035    12.833    
+    SLICE_X107Y128       FDRE (Setup_fdre_C_R)       -0.314    12.519    on_chip_uart/uatransmit/clock_counter_reg[5]
+  -------------------------------------------------------------------
+                         required time                         12.519    
+                         arrival time                          -7.944    
+  -------------------------------------------------------------------
+                         slack                                  4.575    
+
+Slack (MET) :             4.665ns  (required time - arrival time)
+  Source:                 on_chip_uart/uatransmit/clock_counter_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            on_chip_uart/uatransmit/clock_counter_reg[8]/CE
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (sys_clk_pin rise@8.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        3.129ns  (logic 1.029ns (32.886%)  route 2.100ns (67.114%))
+  Logic Levels:           3  (LUT4=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.021ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.460ns = ( 12.460 - 8.000 ) 
+    Source Clock Delay      (SCD):    4.869ns
+    Clock Pessimism Removal (CPR):    0.388ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK_125MHZ_FPGA (IN)
+                         net (fo=0)                   0.000     0.000    CLK_125MHZ_FPGA
+    H16                  IBUF (Prop_ibuf_I_O)         1.299     1.299 r  CLK_125MHZ_FPGA_IBUF_inst/O
+                         net (fo=1, routed)           1.930     3.229    CLK_125MHZ_FPGA_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.079     3.308 r  CLK_125MHZ_FPGA_IBUF_BUFG_inst/O
+                         net (fo=120, routed)         1.561     4.869    on_chip_uart/uatransmit/CLK_125MHZ_FPGA_IBUF_BUFG
+    SLICE_X107Y128       FDRE                                         r  on_chip_uart/uatransmit/clock_counter_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X107Y128       FDRE (Prop_fdre_C_Q)         0.313     5.182 r  on_chip_uart/uatransmit/clock_counter_reg[4]/Q
+                         net (fo=7, routed)           0.846     6.028    on_chip_uart/uatransmit/clock_counter_reg_n_0_[4]
+    SLICE_X107Y128       LUT4 (Prop_lut4_I3_O)        0.216     6.244 f  on_chip_uart/uatransmit/clock_counter[5]_i_6/O
+                         net (fo=3, routed)           0.491     6.735    on_chip_uart/uatransmit/clock_counter[5]_i_6_n_0
+    SLICE_X107Y129       LUT5 (Prop_lut5_I3_O)        0.261     6.996 r  on_chip_uart/uatransmit/clock_counter[5]_i_4/O
+                         net (fo=2, routed)           0.327     7.323    on_chip_uart/uatransmit/clock_counter[5]_i_4_n_0
+    SLICE_X108Y127       LUT6 (Prop_lut6_I1_O)        0.239     7.562 r  on_chip_uart/uatransmit/clock_counter[5]_i_2/O
+                         net (fo=10, routed)          0.436     7.998    on_chip_uart/uatransmit/clock_counter[5]_i_2_n_0
+    SLICE_X106Y129       FDRE                                         r  on_chip_uart/uatransmit/clock_counter_reg[8]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      8.000     8.000 r  
+    H16                                               0.000     8.000 r  CLK_125MHZ_FPGA (IN)
+                         net (fo=0)                   0.000     8.000    CLK_125MHZ_FPGA
+    H16                  IBUF (Prop_ibuf_I_O)         1.232     9.232 r  CLK_125MHZ_FPGA_IBUF_inst/O
+                         net (fo=1, routed)           1.751    10.983    CLK_125MHZ_FPGA_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.072    11.055 r  CLK_125MHZ_FPGA_IBUF_BUFG_inst/O
+                         net (fo=120, routed)         1.405    12.460    on_chip_uart/uatransmit/CLK_125MHZ_FPGA_IBUF_BUFG
+    SLICE_X106Y129       FDRE                                         r  on_chip_uart/uatransmit/clock_counter_reg[8]/C
+                         clock pessimism              0.388    12.848    
+                         clock uncertainty           -0.035    12.812    
+    SLICE_X106Y129       FDRE (Setup_fdre_C_CE)      -0.150    12.662    on_chip_uart/uatransmit/clock_counter_reg[8]
+  -------------------------------------------------------------------
+                         required time                         12.662    
+                         arrival time                          -7.998    
+  -------------------------------------------------------------------
+                         slack                                  4.665    
+
+Slack (MET) :             4.665ns  (required time - arrival time)
+  Source:                 on_chip_uart/uatransmit/clock_counter_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            on_chip_uart/uatransmit/clock_counter_reg[9]/CE
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (sys_clk_pin rise@8.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        3.129ns  (logic 1.029ns (32.886%)  route 2.100ns (67.114%))
+  Logic Levels:           3  (LUT4=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.021ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.460ns = ( 12.460 - 8.000 ) 
+    Source Clock Delay      (SCD):    4.869ns
+    Clock Pessimism Removal (CPR):    0.388ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK_125MHZ_FPGA (IN)
+                         net (fo=0)                   0.000     0.000    CLK_125MHZ_FPGA
+    H16                  IBUF (Prop_ibuf_I_O)         1.299     1.299 r  CLK_125MHZ_FPGA_IBUF_inst/O
+                         net (fo=1, routed)           1.930     3.229    CLK_125MHZ_FPGA_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.079     3.308 r  CLK_125MHZ_FPGA_IBUF_BUFG_inst/O
+                         net (fo=120, routed)         1.561     4.869    on_chip_uart/uatransmit/CLK_125MHZ_FPGA_IBUF_BUFG
+    SLICE_X107Y128       FDRE                                         r  on_chip_uart/uatransmit/clock_counter_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X107Y128       FDRE (Prop_fdre_C_Q)         0.313     5.182 r  on_chip_uart/uatransmit/clock_counter_reg[4]/Q
+                         net (fo=7, routed)           0.846     6.028    on_chip_uart/uatransmit/clock_counter_reg_n_0_[4]
+    SLICE_X107Y128       LUT4 (Prop_lut4_I3_O)        0.216     6.244 f  on_chip_uart/uatransmit/clock_counter[5]_i_6/O
+                         net (fo=3, routed)           0.491     6.735    on_chip_uart/uatransmit/clock_counter[5]_i_6_n_0
+    SLICE_X107Y129       LUT5 (Prop_lut5_I3_O)        0.261     6.996 r  on_chip_uart/uatransmit/clock_counter[5]_i_4/O
+                         net (fo=2, routed)           0.327     7.323    on_chip_uart/uatransmit/clock_counter[5]_i_4_n_0
+    SLICE_X108Y127       LUT6 (Prop_lut6_I1_O)        0.239     7.562 r  on_chip_uart/uatransmit/clock_counter[5]_i_2/O
+                         net (fo=10, routed)          0.436     7.998    on_chip_uart/uatransmit/clock_counter[5]_i_2_n_0
+    SLICE_X106Y129       FDRE                                         r  on_chip_uart/uatransmit/clock_counter_reg[9]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      8.000     8.000 r  
+    H16                                               0.000     8.000 r  CLK_125MHZ_FPGA (IN)
+                         net (fo=0)                   0.000     8.000    CLK_125MHZ_FPGA
+    H16                  IBUF (Prop_ibuf_I_O)         1.232     9.232 r  CLK_125MHZ_FPGA_IBUF_inst/O
+                         net (fo=1, routed)           1.751    10.983    CLK_125MHZ_FPGA_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.072    11.055 r  CLK_125MHZ_FPGA_IBUF_BUFG_inst/O
+                         net (fo=120, routed)         1.405    12.460    on_chip_uart/uatransmit/CLK_125MHZ_FPGA_IBUF_BUFG
+    SLICE_X106Y129       FDRE                                         r  on_chip_uart/uatransmit/clock_counter_reg[9]/C
+                         clock pessimism              0.388    12.848    
+                         clock uncertainty           -0.035    12.812    
+    SLICE_X106Y129       FDRE (Setup_fdre_C_CE)      -0.150    12.662    on_chip_uart/uatransmit/clock_counter_reg[9]
+  -------------------------------------------------------------------
+                         required time                         12.662    
+                         arrival time                          -7.998    
+  -------------------------------------------------------------------
+                         slack                                  4.665    
+
+Slack (MET) :             4.696ns  (required time - arrival time)
+  Source:                 b_parser/button_debouncer/loop[3].sat_counter_reg[3][1]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            on_chip_uart/serial_out_reg_reg/S
+                            (rising edge-triggered cell FDSE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (sys_clk_pin rise@8.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        2.866ns  (logic 0.660ns (23.030%)  route 2.206ns (76.970%))
+  Logic Levels:           2  (LUT4=1 LUT6=1)
+  Clock Path Skew:        -0.030ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.455ns = ( 12.455 - 8.000 ) 
+    Source Clock Delay      (SCD):    4.873ns
+    Clock Pessimism Removal (CPR):    0.388ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK_125MHZ_FPGA (IN)
+                         net (fo=0)                   0.000     0.000    CLK_125MHZ_FPGA
+    H16                  IBUF (Prop_ibuf_I_O)         1.299     1.299 r  CLK_125MHZ_FPGA_IBUF_inst/O
+                         net (fo=1, routed)           1.930     3.229    CLK_125MHZ_FPGA_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.079     3.308 r  CLK_125MHZ_FPGA_IBUF_BUFG_inst/O
+                         net (fo=120, routed)         1.565     4.873    b_parser/button_debouncer/CLK_125MHZ_FPGA_IBUF_BUFG
+    SLICE_X108Y131       FDRE                                         r  b_parser/button_debouncer/loop[3].sat_counter_reg[3][1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X108Y131       FDRE (Prop_fdre_C_Q)         0.361     5.234 r  b_parser/button_debouncer/loop[3].sat_counter_reg[3][1]/Q
+                         net (fo=7, routed)           0.630     5.864    b_parser/button_debouncer/loop[3].sat_counter_reg[3]__0[1]
+    SLICE_X109Y131       LUT4 (Prop_lut4_I3_O)        0.202     6.066 r  b_parser/button_debouncer/edges[3]_i_2/O
+                         net (fo=6, routed)           0.248     6.313    b_parser/button_debouncer/loop[3].sat_counter_reg[3][0]_0
+    SLICE_X108Y130       LUT6 (Prop_lut6_I4_O)        0.097     6.410 r  b_parser/button_debouncer/serial_in_reg_i_1/O
+                         net (fo=15, routed)          1.328     7.739    on_chip_uart/reset
+    SLICE_X108Y125       FDSE                                         r  on_chip_uart/serial_out_reg_reg/S
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      8.000     8.000 r  
+    H16                                               0.000     8.000 r  CLK_125MHZ_FPGA (IN)
+                         net (fo=0)                   0.000     8.000    CLK_125MHZ_FPGA
+    H16                  IBUF (Prop_ibuf_I_O)         1.232     9.232 r  CLK_125MHZ_FPGA_IBUF_inst/O
+                         net (fo=1, routed)           1.751    10.983    CLK_125MHZ_FPGA_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.072    11.055 r  CLK_125MHZ_FPGA_IBUF_BUFG_inst/O
+                         net (fo=120, routed)         1.400    12.455    on_chip_uart/CLK_125MHZ_FPGA_IBUF_BUFG
+    SLICE_X108Y125       FDSE                                         r  on_chip_uart/serial_out_reg_reg/C
+                         clock pessimism              0.388    12.843    
+                         clock uncertainty           -0.035    12.807    
+    SLICE_X108Y125       FDSE (Setup_fdse_C_S)       -0.373    12.434    on_chip_uart/serial_out_reg_reg
+  -------------------------------------------------------------------
+                         required time                         12.434    
+                         arrival time                          -7.739    
+  -------------------------------------------------------------------
+                         slack                                  4.696    
+
+Slack (MET) :             4.763ns  (required time - arrival time)
+  Source:                 on_chip_uart/uatransmit/clock_counter_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            on_chip_uart/uatransmit/clock_counter_reg[1]/CE
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (sys_clk_pin rise@8.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        3.030ns  (logic 1.029ns (33.962%)  route 2.001ns (66.038%))
+  Logic Levels:           3  (LUT4=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.022ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.458ns = ( 12.458 - 8.000 ) 
+    Source Clock Delay      (SCD):    4.869ns
+    Clock Pessimism Removal (CPR):    0.389ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK_125MHZ_FPGA (IN)
+                         net (fo=0)                   0.000     0.000    CLK_125MHZ_FPGA
+    H16                  IBUF (Prop_ibuf_I_O)         1.299     1.299 r  CLK_125MHZ_FPGA_IBUF_inst/O
+                         net (fo=1, routed)           1.930     3.229    CLK_125MHZ_FPGA_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.079     3.308 r  CLK_125MHZ_FPGA_IBUF_BUFG_inst/O
+                         net (fo=120, routed)         1.561     4.869    on_chip_uart/uatransmit/CLK_125MHZ_FPGA_IBUF_BUFG
+    SLICE_X107Y128       FDRE                                         r  on_chip_uart/uatransmit/clock_counter_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X107Y128       FDRE (Prop_fdre_C_Q)         0.313     5.182 r  on_chip_uart/uatransmit/clock_counter_reg[4]/Q
+                         net (fo=7, routed)           0.846     6.028    on_chip_uart/uatransmit/clock_counter_reg_n_0_[4]
+    SLICE_X107Y128       LUT4 (Prop_lut4_I3_O)        0.216     6.244 f  on_chip_uart/uatransmit/clock_counter[5]_i_6/O
+                         net (fo=3, routed)           0.491     6.735    on_chip_uart/uatransmit/clock_counter[5]_i_6_n_0
+    SLICE_X107Y129       LUT5 (Prop_lut5_I3_O)        0.261     6.996 r  on_chip_uart/uatransmit/clock_counter[5]_i_4/O
+                         net (fo=2, routed)           0.327     7.323    on_chip_uart/uatransmit/clock_counter[5]_i_4_n_0
+    SLICE_X108Y127       LUT6 (Prop_lut6_I1_O)        0.239     7.562 r  on_chip_uart/uatransmit/clock_counter[5]_i_2/O
+                         net (fo=10, routed)          0.337     7.899    on_chip_uart/uatransmit/clock_counter[5]_i_2_n_0
+    SLICE_X106Y128       FDRE                                         r  on_chip_uart/uatransmit/clock_counter_reg[1]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      8.000     8.000 r  
+    H16                                               0.000     8.000 r  CLK_125MHZ_FPGA (IN)
+                         net (fo=0)                   0.000     8.000    CLK_125MHZ_FPGA
+    H16                  IBUF (Prop_ibuf_I_O)         1.232     9.232 r  CLK_125MHZ_FPGA_IBUF_inst/O
+                         net (fo=1, routed)           1.751    10.983    CLK_125MHZ_FPGA_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.072    11.055 r  CLK_125MHZ_FPGA_IBUF_BUFG_inst/O
+                         net (fo=120, routed)         1.403    12.458    on_chip_uart/uatransmit/CLK_125MHZ_FPGA_IBUF_BUFG
+    SLICE_X106Y128       FDRE                                         r  on_chip_uart/uatransmit/clock_counter_reg[1]/C
+                         clock pessimism              0.389    12.847    
+                         clock uncertainty           -0.035    12.811    
+    SLICE_X106Y128       FDRE (Setup_fdre_C_CE)      -0.150    12.661    on_chip_uart/uatransmit/clock_counter_reg[1]
+  -------------------------------------------------------------------
+                         required time                         12.661    
+                         arrival time                          -7.899    
+  -------------------------------------------------------------------
+                         slack                                  4.763    
+
+Slack (MET) :             4.768ns  (required time - arrival time)
+  Source:                 on_chip_uart/uatransmit/clock_counter_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            on_chip_uart/uatransmit/clock_counter_reg[6]/CE
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (sys_clk_pin rise@8.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        3.026ns  (logic 1.029ns (34.006%)  route 1.997ns (65.994%))
+  Logic Levels:           3  (LUT4=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.021ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.460ns = ( 12.460 - 8.000 ) 
+    Source Clock Delay      (SCD):    4.869ns
+    Clock Pessimism Removal (CPR):    0.388ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK_125MHZ_FPGA (IN)
+                         net (fo=0)                   0.000     0.000    CLK_125MHZ_FPGA
+    H16                  IBUF (Prop_ibuf_I_O)         1.299     1.299 r  CLK_125MHZ_FPGA_IBUF_inst/O
+                         net (fo=1, routed)           1.930     3.229    CLK_125MHZ_FPGA_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.079     3.308 r  CLK_125MHZ_FPGA_IBUF_BUFG_inst/O
+                         net (fo=120, routed)         1.561     4.869    on_chip_uart/uatransmit/CLK_125MHZ_FPGA_IBUF_BUFG
+    SLICE_X107Y128       FDRE                                         r  on_chip_uart/uatransmit/clock_counter_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X107Y128       FDRE (Prop_fdre_C_Q)         0.313     5.182 r  on_chip_uart/uatransmit/clock_counter_reg[4]/Q
+                         net (fo=7, routed)           0.846     6.028    on_chip_uart/uatransmit/clock_counter_reg_n_0_[4]
+    SLICE_X107Y128       LUT4 (Prop_lut4_I3_O)        0.216     6.244 f  on_chip_uart/uatransmit/clock_counter[5]_i_6/O
+                         net (fo=3, routed)           0.491     6.735    on_chip_uart/uatransmit/clock_counter[5]_i_6_n_0
+    SLICE_X107Y129       LUT5 (Prop_lut5_I3_O)        0.261     6.996 r  on_chip_uart/uatransmit/clock_counter[5]_i_4/O
+                         net (fo=2, routed)           0.327     7.323    on_chip_uart/uatransmit/clock_counter[5]_i_4_n_0
+    SLICE_X108Y127       LUT6 (Prop_lut6_I1_O)        0.239     7.562 r  on_chip_uart/uatransmit/clock_counter[5]_i_2/O
+                         net (fo=10, routed)          0.333     7.895    on_chip_uart/uatransmit/clock_counter[5]_i_2_n_0
+    SLICE_X107Y129       FDRE                                         r  on_chip_uart/uatransmit/clock_counter_reg[6]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      8.000     8.000 r  
+    H16                                               0.000     8.000 r  CLK_125MHZ_FPGA (IN)
+                         net (fo=0)                   0.000     8.000    CLK_125MHZ_FPGA
+    H16                  IBUF (Prop_ibuf_I_O)         1.232     9.232 r  CLK_125MHZ_FPGA_IBUF_inst/O
+                         net (fo=1, routed)           1.751    10.983    CLK_125MHZ_FPGA_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.072    11.055 r  CLK_125MHZ_FPGA_IBUF_BUFG_inst/O
+                         net (fo=120, routed)         1.405    12.460    on_chip_uart/uatransmit/CLK_125MHZ_FPGA_IBUF_BUFG
+    SLICE_X107Y129       FDRE                                         r  on_chip_uart/uatransmit/clock_counter_reg[6]/C
+                         clock pessimism              0.388    12.848    
+                         clock uncertainty           -0.035    12.812    
+    SLICE_X107Y129       FDRE (Setup_fdre_C_CE)      -0.150    12.662    on_chip_uart/uatransmit/clock_counter_reg[6]
+  -------------------------------------------------------------------
+                         required time                         12.662    
+                         arrival time                          -7.895    
+  -------------------------------------------------------------------
+                         slack                                  4.768    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.151ns  (arrival time - required time)
+  Source:                 b_parser/button_debouncer/loop[1].sat_counter_reg[1][6]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            b_parser/button_debouncer/loop[1].sat_counter_reg[1][7]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.256ns  (logic 0.186ns (72.775%)  route 0.070ns (27.225%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.328ns
+    Source Clock Delay      (SCD):    1.799ns
+    Clock Pessimism Removal (CPR):    0.517ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK_125MHZ_FPGA (IN)
+                         net (fo=0)                   0.000     0.000    CLK_125MHZ_FPGA
+    H16                  IBUF (Prop_ibuf_I_O)         0.219     0.219 r  CLK_125MHZ_FPGA_IBUF_inst/O
+                         net (fo=1, routed)           0.842     1.060    CLK_125MHZ_FPGA_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.086 r  CLK_125MHZ_FPGA_IBUF_BUFG_inst/O
+                         net (fo=120, routed)         0.712     1.799    b_parser/button_debouncer/CLK_125MHZ_FPGA_IBUF_BUFG
+    SLICE_X110Y132       FDRE                                         r  b_parser/button_debouncer/loop[1].sat_counter_reg[1][6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X110Y132       FDRE (Prop_fdre_C_Q)         0.141     1.940 r  b_parser/button_debouncer/loop[1].sat_counter_reg[1][6]/Q
+                         net (fo=5, routed)           0.070     2.009    b_parser/button_debouncer/loop[1].sat_counter_reg[1]__0[6]
+    SLICE_X111Y132       LUT6 (Prop_lut6_I5_O)        0.045     2.054 r  b_parser/button_debouncer/loop[1].sat_counter[1][7]_i_3/O
+                         net (fo=1, routed)           0.000     2.054    b_parser/button_debouncer/p_0_in__0[7]
+    SLICE_X111Y132       FDRE                                         r  b_parser/button_debouncer/loop[1].sat_counter_reg[1][7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK_125MHZ_FPGA (IN)
+                         net (fo=0)                   0.000     0.000    CLK_125MHZ_FPGA
+    H16                  IBUF (Prop_ibuf_I_O)         0.406     0.406 r  CLK_125MHZ_FPGA_IBUF_inst/O
+                         net (fo=1, routed)           0.907     1.313    CLK_125MHZ_FPGA_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.342 r  CLK_125MHZ_FPGA_IBUF_BUFG_inst/O
+                         net (fo=120, routed)         0.986     2.328    b_parser/button_debouncer/CLK_125MHZ_FPGA_IBUF_BUFG
+    SLICE_X111Y132       FDRE                                         r  b_parser/button_debouncer/loop[1].sat_counter_reg[1][7]/C
+                         clock pessimism             -0.517     1.812    
+    SLICE_X111Y132       FDRE (Hold_fdre_C_D)         0.092     1.904    b_parser/button_debouncer/loop[1].sat_counter_reg[1][7]
+  -------------------------------------------------------------------
+                         required time                         -1.904    
+                         arrival time                           2.054    
+  -------------------------------------------------------------------
+                         slack                                  0.151    
+
+Slack (MET) :             0.161ns  (arrival time - required time)
+  Source:                 char_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            on_chip_uart/uatransmit/internal_data_reg[4]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.184ns  (logic 0.128ns (69.629%)  route 0.056ns (30.371%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.318ns
+    Source Clock Delay      (SCD):    1.792ns
+    Clock Pessimism Removal (CPR):    0.514ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK_125MHZ_FPGA (IN)
+                         net (fo=0)                   0.000     0.000    CLK_125MHZ_FPGA
+    H16                  IBUF (Prop_ibuf_I_O)         0.219     0.219 r  CLK_125MHZ_FPGA_IBUF_inst/O
+                         net (fo=1, routed)           0.842     1.060    CLK_125MHZ_FPGA_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.086 r  CLK_125MHZ_FPGA_IBUF_BUFG_inst/O
+                         net (fo=120, routed)         0.705     1.792    CLK_125MHZ_FPGA_IBUF_BUFG
+    SLICE_X109Y126       FDRE                                         r  char_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X109Y126       FDRE (Prop_fdre_C_Q)         0.128     1.920 r  char_reg[4]/Q
+                         net (fo=3, routed)           0.056     1.975    on_chip_uart/uatransmit/char_reg[7][4]
+    SLICE_X108Y126       FDRE                                         r  on_chip_uart/uatransmit/internal_data_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK_125MHZ_FPGA (IN)
+                         net (fo=0)                   0.000     0.000    CLK_125MHZ_FPGA
+    H16                  IBUF (Prop_ibuf_I_O)         0.406     0.406 r  CLK_125MHZ_FPGA_IBUF_inst/O
+                         net (fo=1, routed)           0.907     1.313    CLK_125MHZ_FPGA_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.342 r  CLK_125MHZ_FPGA_IBUF_BUFG_inst/O
+                         net (fo=120, routed)         0.976     2.318    on_chip_uart/uatransmit/CLK_125MHZ_FPGA_IBUF_BUFG
+    SLICE_X108Y126       FDRE                                         r  on_chip_uart/uatransmit/internal_data_reg[4]/C
+                         clock pessimism             -0.514     1.805    
+    SLICE_X108Y126       FDRE (Hold_fdre_C_D)         0.010     1.815    on_chip_uart/uatransmit/internal_data_reg[4]
+  -------------------------------------------------------------------
+                         required time                         -1.815    
+                         arrival time                           1.975    
+  -------------------------------------------------------------------
+                         slack                                  0.161    
+
+Slack (MET) :             0.169ns  (arrival time - required time)
+  Source:                 char_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            on_chip_uart/uatransmit/internal_data_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.258ns  (logic 0.141ns (54.631%)  route 0.117ns (45.369%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.318ns
+    Source Clock Delay      (SCD):    1.792ns
+    Clock Pessimism Removal (CPR):    0.514ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK_125MHZ_FPGA (IN)
+                         net (fo=0)                   0.000     0.000    CLK_125MHZ_FPGA
+    H16                  IBUF (Prop_ibuf_I_O)         0.219     0.219 r  CLK_125MHZ_FPGA_IBUF_inst/O
+                         net (fo=1, routed)           0.842     1.060    CLK_125MHZ_FPGA_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.086 r  CLK_125MHZ_FPGA_IBUF_BUFG_inst/O
+                         net (fo=120, routed)         0.705     1.792    CLK_125MHZ_FPGA_IBUF_BUFG
+    SLICE_X109Y126       FDRE                                         r  char_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X109Y126       FDRE (Prop_fdre_C_Q)         0.141     1.933 r  char_reg[3]/Q
+                         net (fo=3, routed)           0.117     2.050    on_chip_uart/uatransmit/char_reg[7][3]
+    SLICE_X108Y126       FDRE                                         r  on_chip_uart/uatransmit/internal_data_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK_125MHZ_FPGA (IN)
+                         net (fo=0)                   0.000     0.000    CLK_125MHZ_FPGA
+    H16                  IBUF (Prop_ibuf_I_O)         0.406     0.406 r  CLK_125MHZ_FPGA_IBUF_inst/O
+                         net (fo=1, routed)           0.907     1.313    CLK_125MHZ_FPGA_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.342 r  CLK_125MHZ_FPGA_IBUF_BUFG_inst/O
+                         net (fo=120, routed)         0.976     2.318    on_chip_uart/uatransmit/CLK_125MHZ_FPGA_IBUF_BUFG
+    SLICE_X108Y126       FDRE                                         r  on_chip_uart/uatransmit/internal_data_reg[3]/C
+                         clock pessimism             -0.514     1.805    
+    SLICE_X108Y126       FDRE (Hold_fdre_C_D)         0.076     1.881    on_chip_uart/uatransmit/internal_data_reg[3]
+  -------------------------------------------------------------------
+                         required time                         -1.881    
+                         arrival time                           2.050    
+  -------------------------------------------------------------------
+                         slack                                  0.169    
+
+Slack (MET) :             0.176ns  (arrival time - required time)
+  Source:                 b_parser/button_synchronizer/ff1_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            b_parser/button_synchronizer/ff2_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.248ns  (logic 0.141ns (56.775%)  route 0.107ns (43.225%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.327ns
+    Source Clock Delay      (SCD):    1.798ns
+    Clock Pessimism Removal (CPR):    0.530ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK_125MHZ_FPGA (IN)
+                         net (fo=0)                   0.000     0.000    CLK_125MHZ_FPGA
+    H16                  IBUF (Prop_ibuf_I_O)         0.219     0.219 r  CLK_125MHZ_FPGA_IBUF_inst/O
+                         net (fo=1, routed)           0.842     1.060    CLK_125MHZ_FPGA_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.086 r  CLK_125MHZ_FPGA_IBUF_BUFG_inst/O
+                         net (fo=120, routed)         0.711     1.798    b_parser/button_synchronizer/CLK_125MHZ_FPGA_IBUF_BUFG
+    SLICE_X113Y131       FDRE                                         r  b_parser/button_synchronizer/ff1_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X113Y131       FDRE (Prop_fdre_C_Q)         0.141     1.939 r  b_parser/button_synchronizer/ff1_reg[3]/Q
+                         net (fo=1, routed)           0.107     2.046    b_parser/button_synchronizer/ff1[3]
+    SLICE_X113Y131       FDRE                                         r  b_parser/button_synchronizer/ff2_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK_125MHZ_FPGA (IN)
+                         net (fo=0)                   0.000     0.000    CLK_125MHZ_FPGA
+    H16                  IBUF (Prop_ibuf_I_O)         0.406     0.406 r  CLK_125MHZ_FPGA_IBUF_inst/O
+                         net (fo=1, routed)           0.907     1.313    CLK_125MHZ_FPGA_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.342 r  CLK_125MHZ_FPGA_IBUF_BUFG_inst/O
+                         net (fo=120, routed)         0.985     2.327    b_parser/button_synchronizer/CLK_125MHZ_FPGA_IBUF_BUFG
+    SLICE_X113Y131       FDRE                                         r  b_parser/button_synchronizer/ff2_reg[3]/C
+                         clock pessimism             -0.530     1.798    
+    SLICE_X113Y131       FDRE (Hold_fdre_C_D)         0.072     1.870    b_parser/button_synchronizer/ff2_reg[3]
+  -------------------------------------------------------------------
+                         required time                         -1.870    
+                         arrival time                           2.046    
+  -------------------------------------------------------------------
+                         slack                                  0.176    
+
+Slack (MET) :             0.186ns  (arrival time - required time)
+  Source:                 on_chip_uart/uareceive/rx_shift_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            char_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.246ns  (logic 0.141ns (57.395%)  route 0.105ns (42.605%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.318ns
+    Source Clock Delay      (SCD):    1.792ns
+    Clock Pessimism Removal (CPR):    0.514ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK_125MHZ_FPGA (IN)
+                         net (fo=0)                   0.000     0.000    CLK_125MHZ_FPGA
+    H16                  IBUF (Prop_ibuf_I_O)         0.219     0.219 r  CLK_125MHZ_FPGA_IBUF_inst/O
+                         net (fo=1, routed)           0.842     1.060    CLK_125MHZ_FPGA_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.086 r  CLK_125MHZ_FPGA_IBUF_BUFG_inst/O
+                         net (fo=120, routed)         0.705     1.792    on_chip_uart/uareceive/CLK_125MHZ_FPGA_IBUF_BUFG
+    SLICE_X107Y126       FDRE                                         r  on_chip_uart/uareceive/rx_shift_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X107Y126       FDRE (Prop_fdre_C_Q)         0.141     1.933 r  on_chip_uart/uareceive/rx_shift_reg[2]/Q
+                         net (fo=2, routed)           0.105     2.037    data_out[1]
+    SLICE_X109Y126       FDRE                                         r  char_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK_125MHZ_FPGA (IN)
+                         net (fo=0)                   0.000     0.000    CLK_125MHZ_FPGA
+    H16                  IBUF (Prop_ibuf_I_O)         0.406     0.406 r  CLK_125MHZ_FPGA_IBUF_inst/O
+                         net (fo=1, routed)           0.907     1.313    CLK_125MHZ_FPGA_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.342 r  CLK_125MHZ_FPGA_IBUF_BUFG_inst/O
+                         net (fo=120, routed)         0.976     2.318    CLK_125MHZ_FPGA_IBUF_BUFG
+    SLICE_X109Y126       FDRE                                         r  char_reg[1]/C
+                         clock pessimism             -0.514     1.805    
+    SLICE_X109Y126       FDRE (Hold_fdre_C_D)         0.047     1.852    char_reg[1]
+  -------------------------------------------------------------------
+                         required time                         -1.852    
+                         arrival time                           2.037    
+  -------------------------------------------------------------------
+                         slack                                  0.186    
+
+Slack (MET) :             0.194ns  (arrival time - required time)
+  Source:                 on_chip_uart/uatransmit/clock_counter_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            on_chip_uart/uatransmit/clock_counter_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.314ns  (logic 0.189ns (60.107%)  route 0.125ns (39.893%))
+  Logic Levels:           1  (LUT3=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.321ns
+    Source Clock Delay      (SCD):    1.794ns
+    Clock Pessimism Removal (CPR):    0.515ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK_125MHZ_FPGA (IN)
+                         net (fo=0)                   0.000     0.000    CLK_125MHZ_FPGA
+    H16                  IBUF (Prop_ibuf_I_O)         0.219     0.219 r  CLK_125MHZ_FPGA_IBUF_inst/O
+                         net (fo=1, routed)           0.842     1.060    CLK_125MHZ_FPGA_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.086 r  CLK_125MHZ_FPGA_IBUF_BUFG_inst/O
+                         net (fo=120, routed)         0.707     1.794    on_chip_uart/uatransmit/CLK_125MHZ_FPGA_IBUF_BUFG
+    SLICE_X106Y128       FDRE                                         r  on_chip_uart/uatransmit/clock_counter_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X106Y128       FDRE (Prop_fdre_C_Q)         0.141     1.935 r  on_chip_uart/uatransmit/clock_counter_reg[1]/Q
+                         net (fo=8, routed)           0.125     2.060    on_chip_uart/uatransmit/clock_counter_reg_n_0_[1]
+    SLICE_X107Y128       LUT3 (Prop_lut3_I1_O)        0.048     2.108 r  on_chip_uart/uatransmit/clock_counter[2]_i_1__0/O
+                         net (fo=1, routed)           0.000     2.108    on_chip_uart/uatransmit/clock_counter[2]_i_1__0_n_0
+    SLICE_X107Y128       FDRE                                         r  on_chip_uart/uatransmit/clock_counter_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK_125MHZ_FPGA (IN)
+                         net (fo=0)                   0.000     0.000    CLK_125MHZ_FPGA
+    H16                  IBUF (Prop_ibuf_I_O)         0.406     0.406 r  CLK_125MHZ_FPGA_IBUF_inst/O
+                         net (fo=1, routed)           0.907     1.313    CLK_125MHZ_FPGA_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.342 r  CLK_125MHZ_FPGA_IBUF_BUFG_inst/O
+                         net (fo=120, routed)         0.979     2.321    on_chip_uart/uatransmit/CLK_125MHZ_FPGA_IBUF_BUFG
+    SLICE_X107Y128       FDRE                                         r  on_chip_uart/uatransmit/clock_counter_reg[2]/C
+                         clock pessimism             -0.515     1.807    
+    SLICE_X107Y128       FDRE (Hold_fdre_C_D)         0.107     1.914    on_chip_uart/uatransmit/clock_counter_reg[2]
+  -------------------------------------------------------------------
+                         required time                         -1.914    
+                         arrival time                           2.108    
+  -------------------------------------------------------------------
+                         slack                                  0.194    
+
+Slack (MET) :             0.203ns  (arrival time - required time)
+  Source:                 on_chip_uart/uatransmit/clock_counter_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            on_chip_uart/uatransmit/clock_counter_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.307ns  (logic 0.186ns (60.641%)  route 0.121ns (39.359%))
+  Logic Levels:           1  (LUT2=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.321ns
+    Source Clock Delay      (SCD):    1.794ns
+    Clock Pessimism Removal (CPR):    0.515ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK_125MHZ_FPGA (IN)
+                         net (fo=0)                   0.000     0.000    CLK_125MHZ_FPGA
+    H16                  IBUF (Prop_ibuf_I_O)         0.219     0.219 r  CLK_125MHZ_FPGA_IBUF_inst/O
+                         net (fo=1, routed)           0.842     1.060    CLK_125MHZ_FPGA_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.086 r  CLK_125MHZ_FPGA_IBUF_BUFG_inst/O
+                         net (fo=120, routed)         0.707     1.794    on_chip_uart/uatransmit/CLK_125MHZ_FPGA_IBUF_BUFG
+    SLICE_X107Y128       FDRE                                         r  on_chip_uart/uatransmit/clock_counter_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X107Y128       FDRE (Prop_fdre_C_Q)         0.141     1.935 r  on_chip_uart/uatransmit/clock_counter_reg[0]/Q
+                         net (fo=9, routed)           0.121     2.055    on_chip_uart/uatransmit/clock_counter_reg_n_0_[0]
+    SLICE_X106Y128       LUT2 (Prop_lut2_I0_O)        0.045     2.100 r  on_chip_uart/uatransmit/clock_counter[1]_i_1__0/O
+                         net (fo=1, routed)           0.000     2.100    on_chip_uart/uatransmit/clock_counter[1]_i_1__0_n_0
+    SLICE_X106Y128       FDRE                                         r  on_chip_uart/uatransmit/clock_counter_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK_125MHZ_FPGA (IN)
+                         net (fo=0)                   0.000     0.000    CLK_125MHZ_FPGA
+    H16                  IBUF (Prop_ibuf_I_O)         0.406     0.406 r  CLK_125MHZ_FPGA_IBUF_inst/O
+                         net (fo=1, routed)           0.907     1.313    CLK_125MHZ_FPGA_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.342 r  CLK_125MHZ_FPGA_IBUF_BUFG_inst/O
+                         net (fo=120, routed)         0.979     2.321    on_chip_uart/uatransmit/CLK_125MHZ_FPGA_IBUF_BUFG
+    SLICE_X106Y128       FDRE                                         r  on_chip_uart/uatransmit/clock_counter_reg[1]/C
+                         clock pessimism             -0.515     1.807    
+    SLICE_X106Y128       FDRE (Hold_fdre_C_D)         0.091     1.898    on_chip_uart/uatransmit/clock_counter_reg[1]
+  -------------------------------------------------------------------
+                         required time                         -1.898    
+                         arrival time                           2.100    
+  -------------------------------------------------------------------
+                         slack                                  0.203    
+
+Slack (MET) :             0.205ns  (arrival time - required time)
+  Source:                 on_chip_uart/uareceive/rx_shift_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            on_chip_uart/uareceive/rx_shift_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.252ns  (logic 0.141ns (56.047%)  route 0.111ns (43.953%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.318ns
+    Source Clock Delay      (SCD):    1.792ns
+    Clock Pessimism Removal (CPR):    0.527ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK_125MHZ_FPGA (IN)
+                         net (fo=0)                   0.000     0.000    CLK_125MHZ_FPGA
+    H16                  IBUF (Prop_ibuf_I_O)         0.219     0.219 r  CLK_125MHZ_FPGA_IBUF_inst/O
+                         net (fo=1, routed)           0.842     1.060    CLK_125MHZ_FPGA_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.086 r  CLK_125MHZ_FPGA_IBUF_BUFG_inst/O
+                         net (fo=120, routed)         0.705     1.792    on_chip_uart/uareceive/CLK_125MHZ_FPGA_IBUF_BUFG
+    SLICE_X107Y126       FDRE                                         r  on_chip_uart/uareceive/rx_shift_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X107Y126       FDRE (Prop_fdre_C_Q)         0.141     1.933 r  on_chip_uart/uareceive/rx_shift_reg[4]/Q
+                         net (fo=2, routed)           0.111     2.043    on_chip_uart/uareceive/rx_shift_reg[7]_0[3]
+    SLICE_X107Y126       FDRE                                         r  on_chip_uart/uareceive/rx_shift_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK_125MHZ_FPGA (IN)
+                         net (fo=0)                   0.000     0.000    CLK_125MHZ_FPGA
+    H16                  IBUF (Prop_ibuf_I_O)         0.406     0.406 r  CLK_125MHZ_FPGA_IBUF_inst/O
+                         net (fo=1, routed)           0.907     1.313    CLK_125MHZ_FPGA_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.342 r  CLK_125MHZ_FPGA_IBUF_BUFG_inst/O
+                         net (fo=120, routed)         0.976     2.318    on_chip_uart/uareceive/CLK_125MHZ_FPGA_IBUF_BUFG
+    SLICE_X107Y126       FDRE                                         r  on_chip_uart/uareceive/rx_shift_reg[3]/C
+                         clock pessimism             -0.527     1.792    
+    SLICE_X107Y126       FDRE (Hold_fdre_C_D)         0.047     1.839    on_chip_uart/uareceive/rx_shift_reg[3]
+  -------------------------------------------------------------------
+                         required time                         -1.839    
+                         arrival time                           2.043    
+  -------------------------------------------------------------------
+                         slack                                  0.205    
+
+Slack (MET) :             0.208ns  (arrival time - required time)
+  Source:                 b_parser/button_debouncer/loop[2].sat_counter_reg[2][5]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            b_parser/button_debouncer/loop[2].sat_counter_reg[2][5]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.300ns  (logic 0.186ns (62.073%)  route 0.114ns (37.927%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.326ns
+    Source Clock Delay      (SCD):    1.797ns
+    Clock Pessimism Removal (CPR):    0.530ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK_125MHZ_FPGA (IN)
+                         net (fo=0)                   0.000     0.000    CLK_125MHZ_FPGA
+    H16                  IBUF (Prop_ibuf_I_O)         0.219     0.219 r  CLK_125MHZ_FPGA_IBUF_inst/O
+                         net (fo=1, routed)           0.842     1.060    CLK_125MHZ_FPGA_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.086 r  CLK_125MHZ_FPGA_IBUF_BUFG_inst/O
+                         net (fo=120, routed)         0.710     1.797    b_parser/button_debouncer/CLK_125MHZ_FPGA_IBUF_BUFG
+    SLICE_X113Y130       FDRE                                         r  b_parser/button_debouncer/loop[2].sat_counter_reg[2][5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X113Y130       FDRE (Prop_fdre_C_Q)         0.141     1.938 r  b_parser/button_debouncer/loop[2].sat_counter_reg[2][5]/Q
+                         net (fo=6, routed)           0.114     2.051    b_parser/button_debouncer/loop[2].sat_counter_reg[2]__0[5]
+    SLICE_X113Y130       LUT6 (Prop_lut6_I0_O)        0.045     2.096 r  b_parser/button_debouncer/loop[2].sat_counter[2][5]_i_1/O
+                         net (fo=1, routed)           0.000     2.096    b_parser/button_debouncer/p_0_in__1[5]
+    SLICE_X113Y130       FDRE                                         r  b_parser/button_debouncer/loop[2].sat_counter_reg[2][5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK_125MHZ_FPGA (IN)
+                         net (fo=0)                   0.000     0.000    CLK_125MHZ_FPGA
+    H16                  IBUF (Prop_ibuf_I_O)         0.406     0.406 r  CLK_125MHZ_FPGA_IBUF_inst/O
+                         net (fo=1, routed)           0.907     1.313    CLK_125MHZ_FPGA_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.342 r  CLK_125MHZ_FPGA_IBUF_BUFG_inst/O
+                         net (fo=120, routed)         0.984     2.326    b_parser/button_debouncer/CLK_125MHZ_FPGA_IBUF_BUFG
+    SLICE_X113Y130       FDRE                                         r  b_parser/button_debouncer/loop[2].sat_counter_reg[2][5]/C
+                         clock pessimism             -0.530     1.797    
+    SLICE_X113Y130       FDRE (Hold_fdre_C_D)         0.092     1.889    b_parser/button_debouncer/loop[2].sat_counter_reg[2][5]
+  -------------------------------------------------------------------
+                         required time                         -1.889    
+                         arrival time                           2.096    
+  -------------------------------------------------------------------
+                         slack                                  0.208    
+
+Slack (MET) :             0.208ns  (arrival time - required time)
+  Source:                 b_parser/button_synchronizer/ff1_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            b_parser/button_synchronizer/ff2_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.271ns  (logic 0.164ns (60.439%)  route 0.107ns (39.561%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.331ns
+    Source Clock Delay      (SCD):    1.801ns
+    Clock Pessimism Removal (CPR):    0.531ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK_125MHZ_FPGA (IN)
+                         net (fo=0)                   0.000     0.000    CLK_125MHZ_FPGA
+    H16                  IBUF (Prop_ibuf_I_O)         0.219     0.219 r  CLK_125MHZ_FPGA_IBUF_inst/O
+                         net (fo=1, routed)           0.842     1.060    CLK_125MHZ_FPGA_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.086 r  CLK_125MHZ_FPGA_IBUF_BUFG_inst/O
+                         net (fo=120, routed)         0.714     1.801    b_parser/button_synchronizer/CLK_125MHZ_FPGA_IBUF_BUFG
+    SLICE_X112Y135       FDRE                                         r  b_parser/button_synchronizer/ff1_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X112Y135       FDRE (Prop_fdre_C_Q)         0.164     1.965 r  b_parser/button_synchronizer/ff1_reg[0]/Q
+                         net (fo=1, routed)           0.107     2.072    b_parser/button_synchronizer/ff1[0]
+    SLICE_X112Y135       FDRE                                         r  b_parser/button_synchronizer/ff2_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK_125MHZ_FPGA (IN)
+                         net (fo=0)                   0.000     0.000    CLK_125MHZ_FPGA
+    H16                  IBUF (Prop_ibuf_I_O)         0.406     0.406 r  CLK_125MHZ_FPGA_IBUF_inst/O
+                         net (fo=1, routed)           0.907     1.313    CLK_125MHZ_FPGA_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.342 r  CLK_125MHZ_FPGA_IBUF_BUFG_inst/O
+                         net (fo=120, routed)         0.989     2.331    b_parser/button_synchronizer/CLK_125MHZ_FPGA_IBUF_BUFG
+    SLICE_X112Y135       FDRE                                         r  b_parser/button_synchronizer/ff2_reg[0]/C
+                         clock pessimism             -0.531     1.801    
+    SLICE_X112Y135       FDRE (Hold_fdre_C_D)         0.063     1.864    b_parser/button_synchronizer/ff2_reg[0]
+  -------------------------------------------------------------------
+                         required time                         -1.864    
+                         arrival time                           2.072    
+  -------------------------------------------------------------------
+                         slack                                  0.208    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         sys_clk_pin
+Waveform(ns):       { 0.000 4.000 }
+Period(ns):         8.000
+Sources:            { CLK_125MHZ_FPGA }
+
+Check Type        Corner  Lib Pin  Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location        Pin
+Min Period        n/a     BUFG/I   n/a            1.592         8.000       6.408      BUFGCTRL_X0Y16  CLK_125MHZ_FPGA_IBUF_BUFG_inst/I
+Min Period        n/a     FDRE/C   n/a            1.000         8.000       7.000      SLICE_X111Y133  b_parser/button_debouncer/loop[0].sat_counter_reg[0][0]/C
+Min Period        n/a     FDRE/C   n/a            1.000         8.000       7.000      SLICE_X112Y133  b_parser/button_debouncer/loop[0].sat_counter_reg[0][1]/C
+Min Period        n/a     FDRE/C   n/a            1.000         8.000       7.000      SLICE_X111Y133  b_parser/button_debouncer/loop[0].sat_counter_reg[0][2]/C
+Min Period        n/a     FDRE/C   n/a            1.000         8.000       7.000      SLICE_X112Y133  b_parser/button_debouncer/loop[0].sat_counter_reg[0][3]/C
+Min Period        n/a     FDRE/C   n/a            1.000         8.000       7.000      SLICE_X112Y133  b_parser/button_debouncer/loop[0].sat_counter_reg[0][4]/C
+Min Period        n/a     FDRE/C   n/a            1.000         8.000       7.000      SLICE_X112Y133  b_parser/button_debouncer/loop[0].sat_counter_reg[0][5]/C
+Min Period        n/a     FDRE/C   n/a            1.000         8.000       7.000      SLICE_X111Y133  b_parser/button_debouncer/loop[0].sat_counter_reg[0][6]/C
+Min Period        n/a     FDRE/C   n/a            1.000         8.000       7.000      SLICE_X111Y133  b_parser/button_debouncer/loop[0].sat_counter_reg[0][7]/C
+Min Period        n/a     FDRE/C   n/a            1.000         8.000       7.000      SLICE_X110Y132  b_parser/button_debouncer/loop[1].sat_counter_reg[1][0]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X112Y128  b_parser/button_debouncer/pg/wrap_counter_reg[4]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X112Y128  b_parser/button_debouncer/pg/wrap_counter_reg[5]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X112Y128  b_parser/button_debouncer/pg/wrap_counter_reg[6]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X112Y128  b_parser/button_debouncer/pg/wrap_counter_reg[7]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X108Y130  b_parser/button_edge_detector/edges_reg[3]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X110Y128  on_chip_uart/uareceive/bit_counter_reg[3]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X106Y130  on_chip_uart/uatransmit/clock_counter_reg[10]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X108Y131  b_parser/button_debouncer/loop[3].sat_counter_reg[3][0]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X108Y131  b_parser/button_debouncer/loop[3].sat_counter_reg[3][0]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X108Y131  b_parser/button_debouncer/loop[3].sat_counter_reg[3][1]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X111Y133  b_parser/button_debouncer/loop[0].sat_counter_reg[0][0]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X112Y133  b_parser/button_debouncer/loop[0].sat_counter_reg[0][1]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X111Y133  b_parser/button_debouncer/loop[0].sat_counter_reg[0][2]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X112Y133  b_parser/button_debouncer/loop[0].sat_counter_reg[0][3]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X112Y133  b_parser/button_debouncer/loop[0].sat_counter_reg[0][4]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X112Y133  b_parser/button_debouncer/loop[0].sat_counter_reg[0][5]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X111Y133  b_parser/button_debouncer/loop[0].sat_counter_reg[0][6]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X111Y133  b_parser/button_debouncer/loop[0].sat_counter_reg[0][7]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X110Y132  b_parser/button_debouncer/loop[1].sat_counter_reg[1][0]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         4.000       3.500      SLICE_X110Y132  b_parser/button_debouncer/loop[1].sat_counter_reg[1][0]/C
+
+
+
