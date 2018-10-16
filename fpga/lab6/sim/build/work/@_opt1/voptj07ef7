@@ -1,0 +1,530 @@
+m255
+K4
+z0
+13
+cModel Technology
+Z0 d/home/cc/eecs151/fa18/class/eecs151-abp/Desktop/ee251_labs/fpga_labs_fa18/lab6/sim/build
+T_opt
+!s110 1539312582
+V3o3dWgBTD3aGLba`oEVn03
+04 14 4 work fifo_testbench fast 0
+Z1 04 4 4 work glbl fast 0
+=1-0023246078a7-5bc00bc6-4c0be-2a71
+Z2 o-quiet -auto_acc_if_foreign -work work -L unisims_ver -L unimacro_ver -L secureip
+Z3 tCvgOpt 0
+n@_opt
+Z4 OE;O;10.6b;65
+R0
+T_opt1
+!s110 1539314101
+VmY[4^[G1A_Iz1X`]1nMKA2
+04 24 4 work i2s_controller_testbench fast 0
+R1
+=1-0023246078a7-5bc011b5-6ec7f-5ac9
+R2
+R3
+n@_opt1
+R4
+vasync_fifo
+Z5 !s110 1539314099
+!i10b 1
+!s100 G`md]856jCc5QUNVkY9SI0
+IFG_TYUcoi<]]mkMYQ9>VP0
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z7 w1538697445
+8../../lab6.srcs/sources_1/new/async_fifo.v
+F../../lab6.srcs/sources_1/new/async_fifo.v
+L0 3
+Z8 OE;L;10.6b;65
+r1
+!s85 0
+31
+Z9 !s108 1539314099.000000
+Z10 !s107 ../../lab6.srcs/sources_1/new/util.vh|../../lab6.srcs/sources_1/new/z1top.v|../../lab6.srcs/sources_1/new/uart_transmitter.v|../../lab6.srcs/sources_1/new/uart_receiver.v|../../lab6.srcs/sources_1/new/uart.v|../../lab6.srcs/sources_1/new/tone_generator.v|../../lab6.srcs/sources_1/new/system_testbench.v|../../lab6.srcs/sources_1/new/synchronizer.v|../../lab6.srcs/sources_1/new/rom.v|../../lab6.srcs/sources_1/new/piano_scale_rom.v|../../lab6.srcs/sources_1/new/piano_fsm.v|../../lab6.srcs/sources_1/new/i2s_controller_testbench.v|../../lab6.srcs/sources_1/new/i2s_controller.v|../../lab6.srcs/sources_1/new/fifo_testbench.v|../../lab6.srcs/sources_1/new/fifo.v|../../lab6.srcs/sources_1/new/edge_detector.v|../../lab6.srcs/sources_1/new/debouncer.v|../../lab6.srcs/sources_1/new/button_parser.v|../../lab6.srcs/sources_1/new/async_fifo.v|
+Z11 !s90 +acc|-vmake|-vopt|-source|-O5|-nocovercells|+define+|+incdir+../../lab6.srcs/+incdir+../../lab6.srcs/constrs_1+incdir+../../lab6.srcs/constrs_1/imports+incdir+../../lab6.srcs/constrs_1/imports/constrs_1+incdir+../../lab6.srcs/sources_1+incdir+../../lab6.srcs/sources_1/new|../../lab6.srcs/sources_1/new/async_fifo.v|../../lab6.srcs/sources_1/new/button_parser.v|../../lab6.srcs/sources_1/new/debouncer.v|../../lab6.srcs/sources_1/new/edge_detector.v|../../lab6.srcs/sources_1/new/fifo.v|../../lab6.srcs/sources_1/new/fifo_testbench.v|../../lab6.srcs/sources_1/new/i2s_controller.v|../../lab6.srcs/sources_1/new/i2s_controller_testbench.v|../../lab6.srcs/sources_1/new/piano_fsm.v|../../lab6.srcs/sources_1/new/piano_scale_rom.v|../../lab6.srcs/sources_1/new/rom.v|../../lab6.srcs/sources_1/new/synchronizer.v|../../lab6.srcs/sources_1/new/system_testbench.v|../../lab6.srcs/sources_1/new/tone_generator.v|../../lab6.srcs/sources_1/new/uart.v|../../lab6.srcs/sources_1/new/uart_receiver.v|../../lab6.srcs/sources_1/new/uart_transmitter.v|../../lab6.srcs/sources_1/new/z1top.v|
+!s101 -O5
+!i113 0
+Z12 !s102 -nocovercells
+Z13 o+acc -vmake -source -O5 -nocovercells -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z14 !s92 +acc -vmake -source -O5 -nocovercells +define+ +incdir+../../lab6.srcs/+incdir+../../lab6.srcs/constrs_1+incdir+../../lab6.srcs/constrs_1/imports+incdir+../../lab6.srcs/constrs_1/imports/constrs_1+incdir+../../lab6.srcs/sources_1+incdir+../../lab6.srcs/sources_1/new -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+vbutton_parser
+R5
+!i10b 1
+!s100 >@RCz?b6PD=`:T9k@V>=:3
+IVA6YlgZS[de3C^KZ:]:MW2
+R6
+R0
+R7
+8../../lab6.srcs/sources_1/new/button_parser.v
+F../../lab6.srcs/sources_1/new/button_parser.v
+L0 4
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O5
+!i113 0
+R12
+R13
+R14
+R3
+vchecker
+R5
+!i10b 1
+!s100 n`YJ2bSMPe`W[kY[?m^bU1
+I1YXiI<hgY;CaJY^enZCQ82
+R6
+R0
+Z15 w1537500395
+Z16 8../../lab6.srcs/sources_1/new/debouncer.v
+Z17 F../../lab6.srcs/sources_1/new/debouncer.v
+L0 25
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O5
+!i113 0
+R12
+R13
+R14
+R3
+vdebouncer
+R5
+!i10b 1
+!s100 E5D3VUUdg1Ub07PdT<W=_3
+If;7oohd4Uek1fk;?[mm_11
+R6
+R0
+R15
+R16
+R17
+L0 47
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O5
+!i113 0
+R12
+R13
+R14
+R3
+vedge_detector
+R5
+!i10b 1
+!s100 KG6@7C0GSFWJ5QlgRDQFa0
+IKh^K]facMV=:Z7hL`o7Le2
+R6
+R0
+R15
+8../../lab6.srcs/sources_1/new/edge_detector.v
+F../../lab6.srcs/sources_1/new/edge_detector.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O5
+!i113 0
+R12
+R13
+R14
+R3
+vfifo
+R5
+!i10b 1
+!s100 8U8]ozKKK3EG`LhzdEjlS3
+IdJFG^0QISe1VKbW?g2kQ>1
+R6
+R0
+w1539312571
+8../../lab6.srcs/sources_1/new/fifo.v
+F../../lab6.srcs/sources_1/new/fifo.v
+L0 3
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O5
+!i113 0
+R12
+R13
+R14
+R3
+vfifo_testbench
+R5
+!i10b 1
+!s100 e61Kk6YPk54bMbW;Zhln[2
+I885E=WNMoFCE[JSW72Lmo1
+R6
+R0
+R7
+8../../lab6.srcs/sources_1/new/fifo_testbench.v
+F../../lab6.srcs/sources_1/new/fifo_testbench.v
+L0 18
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O5
+!i113 0
+R12
+R13
+R14
+R3
+vglbl
+!s110 1538699277
+!i10b 1
+!s100 JWZ^meD<P7inSF0<1SiO32
+I2^77@zzM:HNP73OIbMX=M0
+R6
+R0
+w1513215259
+8/opt/Xilinx/Vivado/current/data/verilog/src/glbl.v
+F/opt/Xilinx/Vivado/current/data/verilog/src/glbl.v
+L0 6
+R8
+r1
+!s85 0
+31
+!s108 1538699277.000000
+!s107 /opt/Xilinx/Vivado/current/data/verilog/src/glbl.v|
+!s90 +acc|-vopt|-O5|-source|-nocovercells|/opt/Xilinx/Vivado/current/data/verilog/src/glbl.v|
+!s101 -O5
+!i113 0
+R12
+o+acc -O5 -source -nocovercells -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+vi2s_controller
+R5
+!i10b 1
+!s100 gPC;RU`4R<8<Zbe4B<P4h0
+IfZQ05K_@BH72gUbW5Q@:Q2
+R6
+R0
+w1539314095
+8../../lab6.srcs/sources_1/new/i2s_controller.v
+F../../lab6.srcs/sources_1/new/i2s_controller.v
+L0 3
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O5
+!i113 0
+R12
+R13
+R14
+R3
+vi2s_controller_testbench
+R5
+!i10b 1
+!s100 D6`ebNeDU6OA5o3co>]AY3
+IgA=:_Wb4PiRh:;iRa22>c2
+R6
+R0
+w1539312110
+8../../lab6.srcs/sources_1/new/i2s_controller_testbench.v
+F../../lab6.srcs/sources_1/new/i2s_controller_testbench.v
+L0 11
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O5
+!i113 0
+R12
+R13
+R14
+R3
+vpiano_fsm
+R5
+!i10b 1
+!s100 9`PG8S=3EkRIYL2bN0:Sc2
+IeC_nAO`:8>iaDkS[V9V6Z0
+R6
+R0
+R7
+8../../lab6.srcs/sources_1/new/piano_fsm.v
+F../../lab6.srcs/sources_1/new/piano_fsm.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O5
+!i113 0
+R12
+R13
+R14
+R3
+vpiano_scale_rom
+R5
+!i10b 1
+!s100 WAka<WMNODN>@>L8SOHj;0
+I[dc1EAWl]n0^5QbXLf?I^0
+R6
+R0
+R7
+8../../lab6.srcs/sources_1/new/piano_scale_rom.v
+F../../lab6.srcs/sources_1/new/piano_scale_rom.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O5
+!i113 0
+R12
+R13
+R14
+R3
+vpulse_generator
+R5
+!i10b 1
+!s100 Jl]PMe6GY9Cki<>?c6Nnz3
+Ibh[FKHA_?PkbkozAazi^Y1
+R6
+R0
+R15
+R16
+R17
+L0 4
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O5
+!i113 0
+R12
+R13
+R14
+R3
+vrom
+Z18 !s110 1539314100
+!i10b 1
+!s100 WcC4WLgE?:dz@G<@f6C7@0
+IX:P^NdJaH[Xk_l96lHS=M0
+R6
+R0
+R7
+8../../lab6.srcs/sources_1/new/rom.v
+F../../lab6.srcs/sources_1/new/rom.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O5
+!i113 0
+R12
+R13
+R14
+R3
+vsynchronizer
+R18
+!i10b 1
+!s100 6a?[<K2<c_Mz<FHlJjBi01
+IRcfQzcX9glnSW_0Qo:Ue60
+R6
+R0
+R15
+8../../lab6.srcs/sources_1/new/synchronizer.v
+F../../lab6.srcs/sources_1/new/synchronizer.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O5
+!i113 0
+R12
+R13
+R14
+R3
+vsystem_testbench
+R18
+!i10b 1
+!s100 ^_d=YYTRAALnU6H@n<ofb3
+In1T09hW:]53C_[eAQAkOE1
+R6
+R0
+R7
+8../../lab6.srcs/sources_1/new/system_testbench.v
+F../../lab6.srcs/sources_1/new/system_testbench.v
+L0 7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O5
+!i113 0
+R12
+R13
+R14
+R3
+vtone_generator
+R18
+!i10b 1
+!s100 Yf5bA0E;]QoFoAY]`zRJA2
+I:iDTe@0TCRV2Tf6GEIY7]3
+R6
+R0
+w1537500656
+8../../lab6.srcs/sources_1/new/tone_generator.v
+F../../lab6.srcs/sources_1/new/tone_generator.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O5
+!i113 0
+R12
+R13
+R14
+R3
+vuart
+R18
+!i10b 1
+!s100 ]5?iEe4ga8O3g0;kP7::P1
+I[:AYCH6HC7AcdejAE38f@0
+R6
+R0
+R7
+8../../lab6.srcs/sources_1/new/uart.v
+F../../lab6.srcs/sources_1/new/uart.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O5
+!i113 0
+R12
+R13
+R14
+R3
+vuart_receiver
+R18
+!i10b 1
+!s100 zP:oa6N0D5G^D0iYiF>2Q0
+I[Z3@[PK3a?o3R^4icbh2G2
+R6
+R0
+R7
+8../../lab6.srcs/sources_1/new/uart_receiver.v
+F../../lab6.srcs/sources_1/new/uart_receiver.v
+L0 3
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O5
+!i113 0
+R12
+R13
+R14
+R3
+vuart_transmitter
+R18
+!i10b 1
+!s100 >FXL2SGhGOI]N9of<`[g91
+Ien6HX<DZ5FR[SB]a1aK4;2
+R6
+R0
+w1538697725
+8../../lab6.srcs/sources_1/new/uart_transmitter.v
+F../../lab6.srcs/sources_1/new/uart_transmitter.v
+L0 3
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O5
+!i113 0
+R12
+R13
+R14
+R3
+vz1top
+R18
+!i10b 1
+!s100 <6Db<zBh`aKf0lm8Nb@Se1
+IheM^?Yl=FVQbZN]C1FPiY3
+R6
+R0
+R7
+8../../lab6.srcs/sources_1/new/z1top.v
+F../../lab6.srcs/sources_1/new/z1top.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O5
+!i113 0
+R12
+R13
+R14
+R3
